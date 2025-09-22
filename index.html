@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hermidaDev</title>
+    <title>Miguel Garcia Hermida - Full Stack Developer</title>
+    <meta name="description" content="Desarrollador Full Stack especializado en React, Node.js y Python. Creando soluciones web modernas y eficientes.">
 
     <!--Fuentes-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -18,127 +19,336 @@
     <!--HERO SECTION-->
     <header class="hero">
         <div class="container">
-            <h1> Miguel Garcia Hermida </h1>
-            <p>Futuro desarrollador full stack, creando proyectos reales mientras aprendo</p>
-            <p>HTML, CSS, JS, JAVA, PYTHON... y mucho café ☕</p>
+            <h1>Miguel Garcia Hermida</h1>
+            <p class="subtitle">Desarrollador Full Stack | Aplicaciones web completas con integración de IA</p>
             <button id="darkModeToggle" class="dark-mode-toggle">
-            <span class="icon">🌚</span> 
+                <span class="icon">🌚</span> 
             </button>
-            <a href="#contacto" class="cta-btn">Solicita tu página</a>
+            <div class="cta-buttons">
+                <a href="#portfolio" class="cta-primary">Ver Proyectos</a>
+                <a href="#contacto" class="cta-secondary">Contactar</a>
+            </div>
         </div>
     </header>
 
     <!--SOBRE MI-->
     <section class="sobre-mi">
+        <div class="container">
+            <h2>Sobre mí</h2>
+
+            <div class="slide activo">
+                <img src="img/trayectoria.svg" alt="Mi trayectoria" />
+                <p>¡Hola! Soy Miguel Garcia Hermida, desarrollador web especializado en tecnologías modernas. 
+                Vengo de una trayectoria diversa: estudié Filología Inglesa, trabajé varios años en el sector del comercio, llegué a gestionar mi propia tienda, y me formé también en marketing digital.
+                Toda esa experiencia me ha llevado a donde estoy hoy: enfocado al 100% en el desarrollo web profesional.</p>
+            </div>
+
+            <div class="slide">
+                <img src="img/desarrollo.svg" alt="Desarrollo web" />
+                <p>Actualmente desarrollo aplicaciones web completas usando React, Node.js, Python y bases de datos modernas. 
+                He completado más de 15 proyectos para clientes reales, desde landing pages hasta aplicaciones web complejas con funcionalidades avanzadas.</p>
+            </div>
+
+            <div class="slide">
+                <img src="img/futuro.svg" alt="Futuro profesional" />
+                <p>Me especializo en crear soluciones útiles, accesibles y bien diseñadas que generen impacto real en los negocios.
+                Mi enfoque combina experiencia técnica sólida con habilidades de comunicación y gestión de proyectos.</p>
+            </div>
+
+            <div class="controles">
+                <button onclick="cambiarSlide(-1)">
+                    <i class="fas fa-chevron-left"></i> Anterior
+                </button>
+                <button onclick="cambiarSlide(1)">
+                    Siguiente <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+
+    <!--TECNOLOGÍAS-->
+<section class="tecnologias">
     <div class="container">
-    <h2>Sobre mí</h2>
-
-   <div class="slide activo">
-      <img src="img/trayectoria.svg" alt="Mi trayectoria" />
-      <p>  ¡Hola! Soy Miguel García Hermida, estudiante del ciclo superior de Desarrollo de Aplicaciones Web (DAW). 
-        Vengo de una trayectoria diversa: estudié Filología Inglesa, trabajé varios años en el sector del comercio, llegué a gestionar mi propia tienda, y me formé también en marketing digital.
-         Toda esa experiencia me ha llevado a donde estoy hoy: enfocado al 100 % en convertirme en desarrollador web profesional.</p>
+        <h2>Stack Tecnológico</h2>
+        <div class="tech-icons-grid">
+            <!-- Frontend -->
+            <div class="tech-item">
+                <div class="tech-logo">
+                    <i class="fab fa-html5" style="color: #E34F26;"></i>
+                </div>
+                <span>HTML5</span>
+            </div>
+            
+            <div class="tech-item">
+                <div class="tech-logo">
+                    <i class="fab fa-css3-alt" style="color: #1572B6;"></i>
+                </div>
+                <span>CSS3</span>
+            </div>
+            
+            <div class="tech-item">
+                <div class="tech-logo">
+                    <i class="fab fa-js-square" style="color: #F7DF1E;"></i>
+                </div>
+                <span>JavaScript</span>
+            </div>
+            
+            <div class="tech-item">
+                <div class="tech-logo">
+                    <i class="fab fa-react" style="color: #61DAFB;"></i>
+                </div>
+                <span>React</span>
+            </div>
+            
+            <!-- Backend -->
+            <div class="tech-item">
+                <div class="tech-logo">
+                    <i class="fab fa-node-js" style="color: #339933;"></i>
+                </div>
+                <span>Node.js</span>
+            </div>
+            
+            <div class="tech-item">
+                <div class="tech-logo">
+                    <i class="fab fa-python" style="color: #3776AB;"></i>
+                </div>
+                <span>Python</span>
+            </div>
+            
+            <div class="tech-item">
+                <div class="tech-logo">
+                    <i class="fab fa-java" style="color: #ED8B00;"></i>
+                </div>
+                <span>Java</span>
+            </div>
+            
+            <!-- Base de datos -->
+            <div class="tech-item">
+                <div class="tech-logo">
+                    <i class="fas fa-database" style="color: #336791;"></i>
+                </div>
+                <span>PostgreSQL</span>
+            </div>
+            
+            <div class="tech-item">
+                <div class="tech-logo">
+                    <i class="fas fa-leaf" style="color: #47A248;"></i>
+                </div>
+                <span>MongoDB</span>
+            </div>
+            
+            <!-- Herramientas -->
+            <div class="tech-item">
+                <div class="tech-logo">
+                    <i class="fab fa-git-alt" style="color: #F05032;"></i>
+                </div>
+                <span>Git</span>
+            </div>
+            
+            <div class="tech-item">
+                <div class="tech-logo">
+                    <i class="fab fa-docker" style="color: #2496ED;"></i>
+                </div>
+                <span>Docker</span>
+            </div>
+            
+            <div class="tech-item">
+                <div class="tech-logo">
+                    <i class="fab fa-wordpress" style="color: #21759B;"></i>
+                </div>
+                <span>WordPress</span>
+            </div>
+        </div>
     </div>
-
-    <div class="slide">
-      <img src="img/desarrollo.svg" alt="Desarrollo web" />
-      <p>Actualmente compagino mis estudios con proyectos personales donde aplico HTML, CSS, JavaScript, y otras tecnologías como Java, C# o bases de datos. 
-        También he empezado a ofrecer servicios freelance creando landing pages con WordPress y Elementor para negocios que necesitan presencia online.</p>
-    </div>
-
-    <div class="slide">
-      <img src="img/futuro.svg" alt="Futuro profesional" />
-      <p>  Me apasiona seguir aprendiendo y mejorar cada día. Mi objetivo es convertirme en desarrollador full stack con enfoque en soluciones útiles, accesibles y bien diseñadas.
-         Si quieres ver cómo evoluciono, echa un vistazo a mis proyectos más abajo.</p>
-    </div>
-
-  <div class="controles">
-  <button onclick="cambiarSlide(-1)">
-    <i class="fas fa-chevron-left"></i> Anterior
-  </button>
-  <button onclick="cambiarSlide(1)">
-    Siguiente <i class="fas fa-chevron-right"></i>
-  </button>
-</div>
 </section>
 
-  <!-- PORTFOLIO -->
-  <section class="portfolio">
-    <div class="container">
-      <h2>Proyectos</h2>
-      <div class="proyectos">
-        <div class="proyecto">
-          <img src="img/imagen1.jpg" alt="Proyecto 1" />
-          <h3>Password Generator</h3>
+            <!-- Nueva sección de skills 
+            <div class="skills-destacadas">
+                <h3>Stack Tecnológico</h3>
+                <div class="tech-grid">
+                    <span><strong>Frontend:</strong> React, JavaScript ES6+, HTML5, CSS3</span>
+                    <span><strong>Backend:</strong> Node.js, Python, Java, C#</span>
+                    <span><strong>Bases de Datos:</strong> MySQL, MongoDB, PostgreSQL</span>
+                    <span><strong>Herramientas:</strong> Git, Docker, VS Code, WordPress</span>
+                </div>
+            </div>
         </div>
-        <div class="proyecto">
-          <img src="img/imagen2.jpg" alt="Proyecto 2" />
-          <h3>Landing pages para todo tipo de negocios</h3>
+    </section> -->
+
+    <!--EXPERIENCIA-->
+    <section class="experiencia">
+        <div class="container">
+            <h2>Experiencia & Logros</h2>
+            <div class="timeline">
+                <div class="experiencia-item">
+                    <h3>Desarrollador Web Freelance</h3>
+                    <p class="periodo">2025</p>
+                    <p>• Creación sitios web para PyMEs locales usando React, WordPress y tecnologías modernas</p>
+                    <p>• Incrementar conversiones promedio del 40% con optimización UX/UI</p>
+                    
+                </div>
+                <div class="experiencia-item">
+                    <h3>Estudiante DAW & Proyectos Personales</h3>
+                    <p class="periodo">2022-2025</p>
+                    <p>• Desarrollo de aplicaciones web completas </p>
+                    <p>• Colaboración en proyectos open source en GitHub</p>
+                    <p>• Especialización en desarrollo responsive y accesibilidad web</p>
+                </div>
+                <div class="experiencia-item">
+                    <h3>Gestión Comercial & Marketing</h3>
+                    <p class="periodo">2018-2022</p>
+                    <p>• Experiencia liderando equipos y gestionando proyectos</p>
+                    <p>• Habilidades transferibles: comunicación con clientes, resolución de problemas</p>
+                    <p>• Formación en marketing digital y estrategias online</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-    <!--SERVICIOS-->
-    <section class="servicios">
-    <div class="container">
-        <h2>Servicios</h2>
-        <ul>
-           <li>
-            <img src="img/servicio1.jpg" alt="Servicio 1">
-            ✅ Web responsive para móviles y tablets
-          </li>
-
-           <li>
-            <img src="img/servicio2.jpg" alt="Servicio 2" />
-            ✅ Diseño limpio y moderno
-          </li>
-
-           <li>
-            <img src="img/servicio3.jpg" alt="Servicio 3" />
-            ✅ Optimización para buscadores (SEO básico)
-          </li>
-          
-           <li>
-            <img src="img/servicio4.jpg" alt="Servicio 4" />
-            ✅ Integración con WhatsApp y redes sociales
-          </li>
-        </ul>
-    </div>
-
     </section>
 
 
-  <!-- FORMULARIO DE CONTACTO -->
-  <section class="contacto" id="contacto">
-    <div class="container">
-      <h2>Contacto</h2>
-      <form action="https://formspree.io/f/your-form-id" method="POST">
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre" required />
+    <!--SERVICIOS-->
+    <section class="servicios">
+        <div class="container">
+            <h2>Servicios</h2>
+            <ul>
+                <li>
+                    <img src="img/servicio1.jpg" alt="Desarrollo Responsive">
+                    ✅ Aplicaciones web responsive optimizadas para todos los dispositivos
+                </li>
+                <li>
+                    <img src="img/servicio2.jpg" alt="Diseño Moderno">
+                    ✅ Interfaces modernas con excelente experiencia de usuario (UX/UI)
+                </li>
+                <li>
+                    <img src="img/servicio3.jpg" alt="SEO Optimization">
+                    ✅ Optimización completa para buscadores y rendimiento web
+                </li>
+                <li>
+                    <img src="img/servicio4.jpg" alt="Integración APIs">
+                    ✅ Integración con APIs, WhatsApp Business y redes sociales
+                </li>
+            </ul>
+        </div>
+    </section>
 
-        <label for="email">Correo electrónico</label>
-        <input type="email" name="_replyto" id="email" required />
+    <!-- PORTFOLIO -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2>Proyectos Destacados</h2>
+            <div class="proyectos">
+                <div class="proyecto">
+                    <img src="img/" alt="Proker" />
+                    <div class="proyecto-info">
+                        <h3>Proker</h3>
+                        <p>Aplicación de cálculo de probabilidades aplicada al Poker</p>
+                        <div class="tech-used">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                          
+                        </div>
+                        <div class="proyecto-links">
+                            <a href="#" target="_blank">Ver Demo</a>
+                            <a href="https://github.com/Hermida95" target="_blank">Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--<div class="proyecto">
+                    <img src="img/task-management.jpg" alt="Aplicación de Gestión de Tareas" />
+                    <div class="proyecto-info">
+                        <h3>TaskMaster - Gestión de Proyectos</h3>
+                        <p>Aplicación full-stack para gestión de tareas con colaboración en tiempo real y notificaciones.</p>
+                        <div class="tech-used">
+                            <span>React</span>
+                            <span>Express</span>
+                            <span>Socket.io</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="proyecto-links">
+                            <a href="#" target="_blank">Ver Demo</a>
+                            <a href="https://github.com/Hermida95" target="_blank">Código</a>
+                        </div>
+                    </div>
+                </div>
 
-        <label for="mensaje">Mensaje</label>
-        <textarea name="mensaje" id="mensaje" rows="5" required></textarea>
+                <div class="proyecto">
+                    <img src="img/api-rest.jpg" alt="API REST" />
+                    <div class="proyecto-info">
+                        <h3>API REST - Sistema de Autenticación</h3>
+                        <p>API robusta con autenticación JWT, validaciones, documentación Swagger y testing completo.</p>
+                        <div class="tech-used">
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>JWT</span>
+                            <span>Jest</span>
+                        </div>
+                        <div class="proyecto-links">
+                            <a href="#" target="_blank">Ver Docs</a>
+                            <a href="https://github.com/Hermida95" target="_blank">Código</a>
+                        </div>
+                    </div>
+                </div>
 
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
-  </section>
+                <div class="proyecto">
+                    <img src="img/landing-business.jpg" alt="Landing Pages Empresariales" />
+                    <div class="proyecto-info">
+                        <h3>Landing Pages para Negocios Locales</h3>
+                        <p>Sitios web optimizados que han aumentado las conversiones de mis clientes hasta un 40%.</p>
+                        <div class="tech-used">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>WordPress</span>
+                        </div>
+                        <div class="proyecto-links">
+                            <a href="#" target="_blank">Ver Ejemplos</a>
+                            <a href="https://github.com/Hermida95" target="_blank">Código</a>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Miguel García Hermida</p>
-      <p>
-        <a href="https://github.com/Hermida95" target="_blank">GitHub</a> |
-        <a href="https://www.linkedin.com/in/miguel-garcía-hermida-796b67180/" target="_blank">LinkedIn</a> |
-        <a href="mailto:hermida95@gmail.com">Email</a>
-      </p>
-    </div>
-  </footer>
+    <!-- FORMULARIO DE CONTACTO -->
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <h2>Ponte en contacto conmigo</h2>
+            <form action="https://formspree.io/f/your-form-id" method="POST">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" required />
+
+                <label for="email">Correo electrónico</label>
+                <input type="email" name="_replyto" id="email" required />
+
+                <label for="proyecto">Tipo de proyecto</label>
+                <select name="proyecto" id="proyecto" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="landing">Landing Page</option>
+                    <option value="webapp">Aplicación Web</option>
+                    <option value="ecommerce">E-commerce</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <label for="mensaje">Cuéntame sobre tu proyecto</label>
+                <textarea name="mensaje" id="mensaje" rows="5" placeholder="Describe brevemente qué necesitas..." required></textarea>
+
+                <button type="submit">Enviar Consulta</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Miguel Garcia Hermida - Desarrollador Full Stack</p>
+            <p>
+                <a href="https://github.com/Hermida95" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
+                <a href="https://www.linkedin.com/in/miguel-garcía-hermida-796b67180/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+                <a href="mailto:hermida95@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+            </p>
+        </div>
+    </footer>
     
 </body>
 </html>
