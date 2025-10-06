@@ -64,10 +64,10 @@ document.addEventListener('DOMContentLoaded', function() {
   function updateToggleIcon() {
     const icon = darkModeToggle.querySelector('.icon');
     if (body.classList.contains('dark-mode')) {
-      icon.textContent = '🌞';
+      icon.innerHTML = '<img src="img/sun.svg" alt="Modo claro" width="24" height="24">';
       icon.title = 'Modo claro';
     } else {
-      icon.textContent = '🌚';
+      icon.innerHTML = '<img src="img/moon.svg" alt="Modo oscuro" width="24" height="24">';
       icon.title = 'Modo oscuro';
     }
   }
