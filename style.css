@@ -47,6 +47,8 @@ img {
   overflow: hidden;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
+
+  
 }
 
 .hero h1 {
@@ -68,7 +70,27 @@ img {
   opacity: 0.9;
   margin-bottom: 2rem;
 }
+.shiny-text {
+  color: #00c6ff; /* fallback si el navegador no soporta clip text */
+  background: linear-gradient(
+    120deg,
+    #007bff 40%,
+    #ffffff 50%,
+    #007bff 60%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text; /* esencial */
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* hace el texto transparente para ver el gradiente */
+  display: inline-block;
+  animation: shine 5s linear infinite;
+}
 
+@keyframes shine {
+  0% { background-position: 200% 0; }
+100% { background-position: -200% 0; }
+
+  }
 .cta-buttons {
   display: flex;
   gap: 1rem;
@@ -938,97 +960,4 @@ footer a i {
 
 
 
-/* ===== ANIMACIÓN DE CARGA ===== */
 
-/* Contenedor principal - cubre toda la pantalla */
-#loader-container {
-    position: fixed; /* Se queda fijo cubriendo todo */
-    top: 0;
-    left: 0;
-    width: 100vw; /* 100% del ancho de la ventana */
-    height: 100vh; /* 100% del alto de la ventana */
-    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); /* Gradiente azul */
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    z-index: 9999; /* Se pone encima de todo */
-    overflow: hidden;
-}
-
-/* Contenedor del SVG */
-#geometric-loader {
-    width: 500px;
-    height: 500px;
-    position: relative;
-    z-index: 2;
-}
-
-/* Estilo de las líneas del hexágono */
-.hex-line {
-    stroke: #ffffff; /* Color blanco */
-    stroke-width: 3; /* Grosor de la línea */
-    fill: none; /* Sin relleno */
-    stroke-dasharray: 100; /* Longitud total de la línea */
-    stroke-dashoffset: 100; /* Comienza invisible */
-    animation: drawLine 0.6s ease-out forwards; /* Animación de dibujo */
-}
-
-/* Cada línea se dibuja con un pequeño retraso */
-.hex-line:nth-child(1) { animation-delay: 0s; }
-.hex-line:nth-child(2) { animation-delay: 0.1s; }
-.hex-line:nth-child(3) { animation-delay: 0.2s; }
-.hex-line:nth-child(4) { animation-delay: 0.3s; }
-.hex-line:nth-child(5) { animation-delay: 0.4s; }
-.hex-line:nth-child(6) { animation-delay: 0.5s; }
-
-/* Animación que dibuja las líneas */
-@keyframes drawLine {
-    to {
-        stroke-dashoffset: 0; /* La línea se hace visible */
-    }
-}
-
-/* El relleno del hexágono */
-#hex-fill {
-    fill: #ffffff; /* Color blanco */
-    opacity: 0; /* Comienza invisible */
-    animation: fillShape 0.8s ease-out 1s forwards; /* Aparece después de las líneas */
-}
-
-/* Animación del relleno */
-@keyframes fillShape {
-    to {
-        opacity: 0.9; /* Se hace visible */
-    }
-}
-
-/* Contenedor de partículas */
-#particles {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
-/* Estilo de cada partícula individual */
-.particle {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background: white;
-    border-radius: 50%; /* Hace que sea circular */
-    opacity: 0;
-}
-
-/* Animación de fade out (desaparecer) del contenedor */
-.fade-out {
-    animation: fadeOut 0.8s ease-out forwards;
-}
-
-@keyframes fadeOut {
-    to {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
