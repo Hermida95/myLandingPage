@@ -7,8 +7,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f9f9f9;
-  color: #1f1f1f;
+  background-color: var(--light-bg);
+  color: var(--light-text);
   line-height: 1.7;
   font-size: 16px;
 }
@@ -149,15 +149,26 @@ img {
   transform: scale(1.1);
 }
 
-/*Paleta modo oscuro*/
+/* Variables globales para colores */
 :root {
-  --dark-bg: #0f172a;         
-  --dark-card: #1e293b;       
-  --dark-text: #f8fafc;       
-  --dark-accent: #38bdf8;     
-  --dark-secondary: #94a3b8;  
-  --dark-border: #334155;     
-  --dark-highlight: #7dd3fc;  
+  /* Modo claro */
+  --light-bg: #f9f9f9;
+  --light-section-bg: #f9f9f9;
+  --light-card-bg: #ffffff;
+  --light-text: #1f1f1f;
+  --light-text-secondary: #666;
+  --light-accent: #007bff;
+  --light-border: #f0f0f0;
+  
+  /* Modo oscuro */
+  --dark-bg: #0f172a;
+  --dark-section-bg: #0f172a;
+  --dark-card: #1e293b;
+  --dark-text: #f8fafc;
+  --dark-accent: #38bdf8;
+  --dark-secondary: #94a3b8;
+  --dark-border: #334155;
+  --dark-highlight: #7dd3fc;
 }
 
 /* APLICACIÓN COMPLETA DEL MODO OSCURO */
@@ -171,11 +182,11 @@ body.dark-mode {
 }
 
 .dark-mode .sobre-mi {
-  background-color: #0f172a;
+  background-color: var(--dark-section-bg);
 }
 
 .dark-mode .experiencia {
-  background-color: #0f172a;
+  background-color: var(--dark-section-bg);
 }
 
 .dark-mode .slide {
@@ -250,7 +261,7 @@ body, section, .slide, .proyecto, .servicios li {
 /* ===== SOBRE MÍ ===== */
 .sobre-mi {
   padding: 4rem 2rem;
-  background-color: #f5f9ff;
+  background-color: var(--light-section-bg);
 }
 
 .sobre-mi .container {
@@ -393,7 +404,7 @@ body.dark-mode .sobre-mi h2 {
 /* ===== EXPERIENCIA ===== */
 .experiencia {
   padding: 5rem 2rem;
-  background-color: #f8f9ff;
+  background-color: var(--light-section-bg);
 }
 
 .timeline {
@@ -658,7 +669,20 @@ section h2 {
 /* ===== CONTACTO ===== */
 .contacto {
   padding: 5rem 2rem;
-  background-color: #f5f9ff;
+  background-color: var(--light-section-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.contacto::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle at center, rgba(0, 123, 255, 0.03) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .contacto h2 {
@@ -667,6 +691,17 @@ section h2 {
   color: #007bff;
   font-family: 'Sora', sans-serif;
   font-size: 2.2rem;
+  position: relative;
+}
+
+.contacto h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  margin: 1rem auto 0;
+  border-radius: 2px;
 }
 
 .contacto form {
@@ -674,31 +709,57 @@ section h2 {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  background-color: white;
-  padding: 3rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid #f0f0f0;
+  gap: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 3.5rem;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(240, 240, 240, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 .contacto label {
   font-weight: 600;
-  color: #333;
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
+  color: #2a2a2a;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.contacto label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 70%;
+  background: linear-gradient(to bottom, #007bff, #00c6ff);
+  border-radius: 2px;
 }
 
 .contacto input,
 .contacto textarea,
 .contacto select {
-  padding: 1.2rem;
+  padding: 1.3rem;
   font-size: 1rem;
-  border: 2px solid #e1e5e9;
-  border-radius: 12px;
-  transition: all 0.3s ease;
+  border: 2px solid rgba(225, 229, 233, 0.8);
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-family: 'Roboto', sans-serif;
-  background-color: #fafbfc;
+  background-color: rgba(250, 251, 252, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.contacto input:hover,
+.contacto textarea:hover,
+.contacto select:hover {
+  border-color: rgba(0, 123, 255, 0.4);
+  background-color: white;
 }
 
 .contacto input:focus,
@@ -707,55 +768,86 @@ section h2 {
   border-color: #007bff;
   outline: none;
   background-color: white;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.15);
+  transform: translateY(-2px);
 }
 
 .contacto textarea {
   resize: vertical;
-  min-height: 120px;
+  min-height: 140px;
 }
 
 .contacto select {
   cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23007bff' viewBox='0 0 16 16'%3E%3Cpath d='M8 10.5l4-4-1-1-3 3-3-3-1 1 4 4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  appearance: none;
 }
 
 .contacto button {
-  padding: 1.2rem 2rem;
-  background: linear-gradient(135deg, #007bff, #0056b3);
+  padding: 1.3rem 2.5rem;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
   color: white;
   font-weight: 700;
   border: none;
-  border-radius: 12px;
+  border-radius: 16px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 1.1rem;
-  margin-top: 1rem;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  margin-top: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 123, 255, 0.25);
+}
+
+.contacto button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
 }
 
 .contacto button:hover {
-  background: linear-gradient(135deg, #0056b3, #004494);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 123, 255, 0.35);
+}
+
+.contacto button:hover::before {
+  transform: translateX(100%);
 }
 
 .contacto button:active {
-  transform: translateY(0);
+  transform: translateY(-1px);
 }
 
 /* MODO OSCURO PARA CONTACTO */
 .dark-mode .contacto {
-  background-color: #0f172a;
+  background-color: var(--dark-section-bg);
+}
+
+.dark-mode .contacto::before {
+  background: radial-gradient(circle at center, rgba(56, 189, 248, 0.03) 0%, transparent 70%);
 }
 
 .dark-mode .contacto h2 {
   color: var(--dark-accent);
 }
 
+.dark-mode .contacto h2::after {
+  background: linear-gradient(90deg, var(--dark-accent), #0ea5e9);
+}
+
 .dark-mode .contacto form {
-  background-color: var(--dark-card);
-  border: 1px solid var(--dark-border);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  background-color: rgba(30, 41, 59, 0.95);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .dark-mode .contacto label {
@@ -765,17 +857,28 @@ section h2 {
 .dark-mode .contacto input,
 .dark-mode .contacto textarea,
 .dark-mode .contacto select {
-  background-color: #1a2332;
+  background-color: rgba(26, 35, 50, 0.9);
   border-color: var(--dark-border);
   color: var(--dark-text);
+}
+
+.dark-mode .contacto input:hover,
+.dark-mode .contacto textarea:hover,
+.dark-mode .contacto select:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  background-color: rgba(30, 41, 59, 0.95);
 }
 
 .dark-mode .contacto input:focus,
 .dark-mode .contacto textarea:focus,
 .dark-mode .contacto select:focus {
   border-color: var(--dark-accent);
-  background-color: #1e293b;
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+  background-color: rgba(30, 41, 59, 1);
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+}
+
+.dark-mode .contacto select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2338bdf8' viewBox='0 0 16 16'%3E%3Cpath d='M8 10.5l4-4-1-1-3 3-3-3-1 1 4 4z'/%3E%3C/svg%3E");
 }
 
 .dark-mode .contacto input::placeholder,
@@ -897,25 +1000,7 @@ footer a i {
   }
 }
 
-/* MODO OSCURO PARA FOOTER */
-.dark-mode footer {
-  background: linear-gradient(135deg, #020617, #0f172a);
-}
-
-.dark-mode footer::before {
-  background: linear-gradient(90deg, transparent, var(--dark-accent), transparent);
-}
-
-.dark-mode .footer-links a {
-  background: rgba(56, 189, 248, 0.1);
-  border-color: transparent;
-}
-
-.dark-mode .footer-links a:hover {
-  background: rgba(56, 189, 248, 0.2);
-  border-color: var(--dark-accent);
-  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.3);
-}
+/* Eliminado bloque duplicado */
 
 /* RESPONSIVE PARA CONTACTO Y FOOTER */
 @media (max-width: 768px) {
