@@ -486,6 +486,22 @@ body.dark-mode .sobre-mi h2 {
   font-size: 1rem;
 }
 
+/* Colores de los iconos del stack tecnológico */
+.tech-logo .fa-html5 { color: #E34F26; }
+.tech-logo .fa-css3-alt { color: #1572B6; }
+.tech-logo .fa-js-square { color: #F7DF1E; }
+.tech-logo .fa-react { color: #61DAFB; }
+.tech-logo .fa-node-js { color: #339933; }
+.tech-logo .fa-python { color: #3776AB; }
+.tech-logo .fa-java { color: #ED8B00; }
+.tech-logo .fa-php { color: #3776AB; }
+.tech-logo .fa-database { color: #336791; }
+.tech-logo .fa-leaf { color: #47A248; }
+.tech-logo .fa-git-alt { color: #F05032; }
+.tech-logo .fa-docker { color: #2496ED; }
+.tech-logo .fa-wordpress { color: #21759B; }
+.tech-logo .fa-project-diagram { color: #E74C3C; }
+
 /* MODO OSCURO PARA TECNOLOGÍAS */
 .dark-mode .tecnologias {
   background: linear-gradient(135deg, #0f172a, #1e293b);
