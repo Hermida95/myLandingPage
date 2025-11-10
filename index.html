@@ -38,32 +38,40 @@
         <div class="container">
             <h2>Sobre mí</h2>
 
-            <div class="slide activo">
-                <img src="img/trayectoria.svg" alt="Mi trayectoria" />
-                <p>¡Hola! Soy Miguel Garcia Hermida, desarrollador web especializado en tecnologías modernas. 
-                Vengo de una trayectoria diversa: estudié Filología Inglesa, trabajé varios años en el sector del comercio, llegué a gestionar mi propia tienda, y me formé también en marketing digital.
-                Toda esa experiencia me ha llevado a donde estoy hoy: enfocado al 100% en el desarrollo web profesional.</p>
-            </div>
+            <div class="sobre-mi-contenido">
+                <div class="sobre-mi-item">
+                    <h3><i class="fas fa-road"></i> Mi Trayectoria</h3>
+                    <p>¡Hola! Soy Miguel Garcia Hermida, desarrollador web especializado en tecnologías modernas. 
+                    Vengo de una trayectoria diversa: estudié Filología Inglesa, trabajé varios años en el sector del comercio, llegué a gestionar mi propia tienda, y me formé también en marketing digital.
+                    Toda esa experiencia me ha llevado a donde estoy hoy: enfocado al 100% en el desarrollo web profesional.</p>
+                </div>
 
-            <div class="slide">
-                <img src="img/desarrollo.svg" alt="Desarrollo web" />
-                <p>Actualmente me estoy formando como desarrollador Full Stack, cogiendo experiencia práctica en React, Node.js, Python y bases de datos modernas.
-Mi nivel avanzado de inglés y mi capacidad de aprendizaje continuo me permiten adaptarme con rapidez a entornos de trabajo internacionales y a nuevas tecnologías.</p>
-            </div>
+                <div class="sobre-mi-item">
+                    <h3><i class="fas fa-code"></i> Mi Presente</h3>
+                    <p>Actualmente me estoy formando como desarrollador Full Stack, cogiendo experiencia práctica en React, Node.js, Python, Java y bases de datos modernas.
+                    Mi nivel avanzado de inglés y mi capacidad de aprendizaje continuo me permiten adaptarme con rapidez a entornos de trabajo internacionales y a nuevas tecnologías.</p>
+                </div>
 
-            <div class="slide">
-                <img src="img/futuro.svg" alt="Futuro profesional" />
-                <p>Aspiro a convertirme en un desarrollador Full Stack especializado en Inteligencia Artificial, capaz de crear aplicaciones innovadoras que combinen tecnología web moderna con soluciones inteligentes.
-Mi objetivo es contribuir al futuro digital desarrollando herramientas que no solo funcionen bien, sino que también aporten valor real a las personas y a los negocios.</p>
-            </div>
+                <div class="sobre-mi-item">
+                    <h3><i class="fas fa-rocket"></i> Mi Futuro</h3>
+                    <p>Aspiro a convertirme en un desarrollador Full Stack especializado en Inteligencia Artificial, capaz de crear aplicaciones innovadoras que combinen tecnología web moderna con soluciones inteligentes.
+                    Mi objetivo es contribuir al futuro digital desarrollando herramientas que no solo funcionen bien, sino que también aporten valor real a las personas y a los negocios.</p>
+                </div>
 
-            <div class="controles">
-                <button onclick="cambiarSlide(-1)">
-                    <i class="fas fa-chevron-left"></i> Anterior
-                </button>
-                <button onclick="cambiarSlide(1)">
-                    Siguiente <i class="fas fa-chevron-right"></i>
-                </button>
+                <div class="sobre-mi-item profile-card">
+                    <div class="profile-image-container">
+                        <img src="img/;.png" alt="Miguel Garcia Hermida" class="profile-image">
+                    </div>
+                    <h3><i class="fas fa-user"></i> Conecta Conmigo</h3>
+                    <p>
+                        ¡Hola! Me encantaría colaborar en tu próximo proyecto. Siempre estoy abierto a nuevas oportunidades y desafíos interesantes en el mundo del desarrollo web.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/Hermida95" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/miguel-garcía-hermida-796b67180/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:hermida95@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -187,26 +195,10 @@ Mi objetivo es contribuir al futuro digital desarrollando herramientas que no so
             <h2>Proyectos Destacados</h2>
             <div class="proyectos">
                 <div class="proyecto">
-                    <img src="img/proker.jpg" alt="Proker" />
-                    <div class="proyecto-info">
-                        <h3>Proker</h3>
-                        <p>Aplicación de cálculo de probabilidades aplicada al Poker</p>
-                        <div class="tech-used">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="proyecto-links">
-                            <a href="https://hermida95.github.io/Proker/" target="_blank">Ver Demo</a>
-                            <a href="https://github.com/Hermida95/Proker" target="_blank">Código</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="proyecto">
                     <img src="img/WBS.PNG" alt="WhatsApp Booking Saas" /> 
                     <div class="proyecto-info">
-                        <h3>WBS</h3>
-                        <p>Bot para el agendado de citas por WhatsApp.</p>
+                        <h3>WBS - WhatsApp Booking System</h3>
+                        <p>Sistema profesional de gestión de citas a través de WhatsApp. Implementa una arquitectura moderna con microservicios, API RESTful y base de datos relacional.</p>
                         <div class="tech-used">
                             <span>Python</span>
                             <span>PostgreSQL</span>
@@ -215,25 +207,40 @@ Mi objetivo es contribuir al futuro digital desarrollando herramientas que no so
                             <span>HTML5 + CSS3</span>
                         </div>
                         <div class="proyecto-links">
-                            <!--<a href="" target="_blank">Ver Demo</a>-->
+                            <a href="https://wbs-demo.herokuapp.com" target="_blank">Ver Demo</a>
                             <a href="https://github.com/Hermida95/WBS" target="_blank">Código</a>
                         </div>
                     </div>
                 </div>
-                 <div class="proyecto">
+                <div class="proyecto">
                     <img src="img/PasswordGenerator.png" alt="Password Generator" /> 
                     <div class="proyecto-info">
                         <h3>Password Generator</h3>
-                        <p>Aplicación web para la creación de contraseñas seguras. Con opciones para minúsculas, mayúsculas, cifras, símbolos y longitud deseada.</p>
+                        <p>Aplicación web para la creación de contraseñas seguras. Implementa buenas prácticas de seguridad y una interfaz intuitiva con opciones personalizables.</p>
                         <div class="tech-used">
                             <span>JavaScript</span>
                             <span>HTML5</span>
                             <span>CSS3</span>
-                            
                         </div>
                         <div class="proyecto-links">
                             <a href="https://hermida95.github.io/password-generator/" target="_blank">Ver Demo</a>
                             <a href="https://github.com/Hermida95/password-generator" target="_blank">Código</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="img/proker.jpg" alt="Proker" />
+                    <div class="proyecto-info">
+                        <h3>Proker</h3>
+                        <p>Aplicación interactiva que implementa algoritmos de cálculo de probabilidades para el póker, demostrando habilidades en lógica de programación y JavaScript vanilla.</p>
+                        <div class="tech-used">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="proyecto-links">
+                            <a href="https://hermida95.github.io/Proker/" target="_blank">Ver Demo</a>
+                            <a href="https://github.com/Hermida95/Proker" target="_blank">Código</a>
                         </div>
                     </div>
                 </div>

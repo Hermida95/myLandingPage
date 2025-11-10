@@ -1,31 +1,4 @@
-// ===== SLIDER =====
-document.addEventListener("DOMContentLoaded", function () {
-  let slideActual = 0;
-  const slides = document.querySelectorAll(".slide");
-  const tiempoTransicion = 300; // ms
-
-  function cambiarSlide(direccion) {
-    // Oculta el slide actual con fade out
-    slides[slideActual].style.opacity = 0;
-    slides[slideActual].style.transition = `opacity ${tiempoTransicion}ms ease`;
-    
-    setTimeout(() => {
-      slides[slideActual].classList.remove("activo");
-      
-      // Calcula nuevo slide
-      slideActual = (slideActual + direccion + slides.length) % slides.length;
-      
-      // Muestra nuevo slide con fade in
-      slides[slideActual].classList.add("activo");
-      slides[slideActual].style.opacity = 0;
-      setTimeout(() => {
-        slides[slideActual].style.opacity = 1;
-      }, 10);
-    }, tiempoTransicion);
-  }
-
-  window.cambiarSlide = cambiarSlide;
-});
+// Se eliminó el código del slider ya que no se necesita más
 
 // Dark mode
 document.addEventListener('DOMContentLoaded', function() {
