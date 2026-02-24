@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miguel Garcia Hermida - Software Engineer & Web3</title>
-    <meta name="description" content="Desarrollador enfocado en JavaScript, TypeScript, Solidity y DevOps. Arquitectura de software y soluciones modernas.">
+    <title>Miguel Garcia Hermida | Full-Stack Developer</title>
+    <meta name="description"
+        content="Full-Stack Developer specializing in robust, scalable architectures with JavaScript, TypeScript, and React. Professional proficiency in English and French.">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Fonts: Inter for a very clean, minimalist sans-serif look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
@@ -15,270 +19,282 @@
 </head>
 
 <body>
-
-     <header class="hero">
-        <div class="container">
-            <h1 class="shiny-text">Miguel Garcia Hermida</h1>
-            <p class="subtitle">Desarrollador DAW | TypeScript • Solidity • DevOps • Clean Code</p>
-            <button id="darkModeToggle" class="dark-mode-toggle">
-                <span class="icon">🌚</span> 
-            </button>
-            <div class="cta-buttons">
-                <a href="#portfolio" class="cta-primary">Ver Proyectos</a>
-                <a href="#contacto" class="cta-secondary">Contactar</a>
+    <header class="navbar">
+        <div class="container navbar-container">
+            <div class="logo">MGH.</div>
+            <nav class="nav-links">
+                <a href="#about" data-i18n="nav.about">About</a>
+                <a href="#projects" data-i18n="nav.work">Work</a>
+                <a href="#experience" data-i18n="nav.experience">Experience</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="lang-toggle-wrapper">
+                    <button id="langToggle" class="lang-toggle" aria-label="Toggle Language">
+                        <span class="lang-active">EN</span> / <span class="lang-inactive">FR</span>
+                    </button>
+                </div>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary" data-i18n="nav.contact">Contact</a>
             </div>
         </div>
     </header>
 
-    <section class="sobre-mi">
-        <div class="container">
-            <h2>Sobre mí</h2>
-
-            <div class="sobre-mi-contenido">
-                <div class="sobre-mi-item">
-                    <h3><i class="fas fa-road"></i> Mi trayectoria</h3>
-                    <p>Soy Miguel, un perfil técnico con una base humana sólida. 
-                    Vengo de una trayectoria diversa: estudié Filología Inglesa y gestioné mi propio negocio en el sector retail. 
-                    Esa experiencia me dio disciplina y visión de producto, habilidades que ahora aplico al 100% en la ingeniería de software.</p>
+    <main>
+        <section class="hero slide-up">
+            <div class="container">
+                <h1 class="hero-title">Miguel Garcia Hermida<span class="dot">.</span></h1>
+                <h2 class="hero-subtitle" data-i18n="hero.subtitle">Full-Stack Developer crafting scalable web
+                    architectures.</h2>
+                <p class="hero-description" data-i18n="hero.desc">
+                    Building with modern JavaScript, TypeScript, and React. Driven by Clean Code principles and robust
+                    Design Patterns. Currently exploring Solidity and Web3 development.
+                </p>
+                <div class="cta-group">
+                    <a href="#projects" class="btn btn-primary" data-i18n="hero.cta">View Projects</a>
+                    <a href="https://github.com/Hermida95" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-secondary">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
                 </div>
+            </div>
+        </section>
 
-                <div class="sobre-mi-item">
-                    <h3><i class="fas fa-laptop-code"></i> Mi presente</h3>
-                    <p>Actualmente estoy finalizando mis estudios en <strong>DAW</strong> y comenzando mi etapa de <strong>prácticas</strong> en empresa.
-                    Mi día a día se centra en profundizar en el ecosistema <strong>JavaScript/TypeScript</strong> y aplicar <strong>Patrones de Diseño</strong> robustos. 
-                    No me conformo con que el código funcione; busco que sea escalable, mantenible y eficiente.</p>
-                </div>
-
-                <div class="sobre-mi-item">
-                    <h3><i class="fas fa-rocket"></i> Mi futuro</h3>
-                    <p>Me proyecto como un Ingeniero de Software especializado en la intersección entre <strong>Web3 (Solidity)</strong> y <strong>DevOps</strong>.
-                    Mi objetivo es construir infraestructuras descentralizadas y pipelines de automatización, combinando la seguridad de la Blockchain con la agilidad del desarrollo moderno.</p>
-                </div>
-
-                <div class="sobre-mi-item profile-card">
-                    <div class="profile-image-container">
-                        <img src="img/;.png" alt="Miguel Garcia Hermida" class="profile-image">
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about.title">01<span class="dot">.</span> About Me<span
+                        class="dot">.</span></h2>
+                <div class="about-grid">
+                    <div class="about-text fade-in">
+                        <p data-i18n="about.p1">
+                            I am a Full-Stack Developer bridging the gap between sophisticated technical architecture
+                            and
+                            clear business logic. With a foundation forged in enterprise management and retail, I bring
+                            a mature product vision to software development, ensuring that code not only functions
+                            flawlessly but solves real business problems.
+                        </p>
+                        <p data-i18n="about.p2">
+                            My technical stack is firmly rooted in the <strong>TypeScript</strong> and
+                            <strong>React</strong> ecosystem, extending deep into scalable <strong>Node.js</strong>
+                            backends and <strong>Dockerized</strong> deployments. I code with a strict adherence to
+                            <strong>Clean Code</strong> and established Design Patterns, resulting in maintainable,
+                            efficient, and semantic structures.
+                        </p>
+                        <p data-i18n="about.p3">
+                            <strong>Global Communication:</strong> Having formally studied <strong>Modern Languages
+                                Philology</strong>, my professional command of <strong>English</strong> and
+                            <strong>French</strong> is a core asset. It allows me to integrate seamlessly into
+                            international environments, effectively bridge communication gaps between technical and
+                            non-technical stakeholders, and collaborate efficiently across diverse global teams.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">JavaScript (ES6+)</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Git CI/CD</span>
+                            <span class="tag">Solidity (Web3)</span>
+                        </div>
                     </div>
-                    <h3><i class="fas fa-user"></i> Conecta conmigo</h3>
-                    <p>
-                        Busco aportar valor desde el primer día en equipos que valoren la calidad del código y la innovación tecnológica.
-                    </p>
-                    <div class="social-links">
-                        <a href="https://github.com/Hermida95" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/miguel-garcía-hermida-796b67180/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:hermida95@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <div class="about-profile fade-in">
+                        <div class="image-wrapper">
+                            <img src="img/;.png" alt="Miguel Garcia Hermida" class="profile-img"
+                                onerror="this.src='https://ui-avatars.com/api/?name=Miguel+Garcia+Hermida&size=512&background=0D0D0D&color=fff'">
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/Hermida95" target="_blank" aria-label="GitHub"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/miguel-garcía-hermida-796b67180/" target="_blank"
+                                aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:hermida95@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="tecnologias">
-        <div class="container">
-            <h2>Core Stack & Herramientas</h2>
-            <div class="tech-icons-grid">
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-js-square"></i>
-                    </div>
-                    <span>JavaScript (ES6+)</span>
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title" data-i18n="projects.title">02<span class="dot">.</span> Selected Work<span
+                        class="dot">.</span></h2>
+
+                <!-- Floating Image Container -->
+                <div id="hover-image-container" class="hover-image-container">
+                    <img id="hover-image" src="" alt="Project Preview">
                 </div>
 
-                <div class="tech-item">
-                    <div class="tech-logo" style="color: #3178C6;">
-                        <i class="fas fa-code"></i> 
-                    </div>
-                    <span>TypeScript</span>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo" style="color: #627eea;">
-                        <i class="fab fa-ethereum"></i>
-                    </div>
-                    <span>Solidity</span>
-                </div>
+                <div class="projects-list-pure">
 
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-react"></i>
-                    </div>
-                    <span>React</span>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-node-js"></i>
-                    </div>
-                    <span>Node.js</span>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-docker"></i>
-                    </div>
-                    <span>Docker</span>
-                </div>
-
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fab fa-git-alt"></i>
-                    </div>
-                    <span>Git / GitHub</span>
-                </div>
-
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fas fa-infinity"></i>
-                    </div>
-                    <span>CI/CD Basics</span>
-                </div>
-                 
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <span>SQL / NoSQL</span>
-                </div>
-                
-                <div class="tech-item">
-                    <div class="tech-logo">
-                        <i class="fas fa-layer-group"></i>
-                    </div>
-                    <span>Design Patterns</span>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <h2>Proyectos destacados</h2>
-            <div class="proyectos">
-                
-                <div class="proyecto">
-                    <img src="img/icon.png" alt="EvaOS Application" /> 
-                    <div class="proyecto-info">
-                        <h3>EvaOS</h3>
-                        <p>Aplicación web para guardar turnos de trabajo. Incluye una calculadora de sueldo, donde puedes añadir el sueldo base + complementos. También te va actualizando los puntos de la bolsa de trabajo y la cantidad y tipo de contrato.</p>
-                        <div class="tech-used">
+                    <div class="project-row fade-in">
+                        <div class="project-row-info">
+                            <span class="project-overline" data-i18n="projects.p1.overline">Enterprise Tooling</span>
+                            <h3 class="project-title cursor-hover-item" data-image="img/icon.png"
+                                style="display:inline-block;">EvaOS</h3>
+                            <p class="project-desc" data-i18n="projects.p1.desc">
+                                A comprehensive workforce management application emphasizing Clean Architecture.
+                                Features dynamic salary calculations based on contract variables.
+                            </p>
+                        </div>
+                        <div class="project-tech">
                             <span>React</span>
                             <span>TypeScript</span>
-                            <span>AI Integration</span>
-                            <span>Clean Arch</span>
+                            <span>Clean Architecture</span>
                         </div>
-                        <div class="proyecto-links">
-                            <a href="https://eva-os-swart.vercel.app" target="_blank">EvaOS</a>
-                            <a href="https://github.com/Hermida95/eva-os" target="_blank">Código</a>
+                        <div class="project-links">
+                            <a href="https://github.com/Hermida95/eva-os" target="_blank" class="project-link"
+                                aria-label="GitHub Repository" title="Source Code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://eva-os-swart.vercel.app" target="_blank" class="project-link"
+                                aria-label="Live App" title="Live App">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
                         </div>
                     </div>
-                </div>
 
-                <div class="proyecto">
-                    <img src="img/PasswordGenerator.png" alt="Password Generator" /> 
-                    <div class="proyecto-info">
-                        <h3>Secure Password Generator</h3>
-                        <p>Herramienta de seguridad enfocada en la privacidad del usuario. Lógica robusta en JavaScript Vanilla para generar entropía alta sin dependencias externas.</p>
-                        <div class="tech-used">
+                    <div class="project-row fade-in">
+                        <div class="project-row-info">
+                            <span class="project-overline" data-i18n="projects.p2.overline">Security
+                                Infrastructure</span>
+                            <h3 class="project-title cursor-hover-item" data-image="img/PasswordGenerator.png"
+                                style="display:inline-block;">Secure Password Generator</h3>
+                            <p class="project-desc" data-i18n="projects.p2.desc">
+                                A privacy-first security utility engineered with pure JavaScript (Vanilla). Employs
+                                robust entropy generation optimized for zero external dependencies.
+                            </p>
+                        </div>
+                        <div class="project-tech">
                             <span>JavaScript</span>
-                            <span>Algorithm</span>
+                            <span>Cryptography Logic</span>
                             <span>CSS3</span>
                         </div>
-                        <div class="proyecto-links">
-                            <a href="https://hermida95.github.io/password-generator/" target="_blank">Ver Demo</a>
-                            <a href="https://github.com/Hermida95/password-generator" target="_blank">Código</a>
+                        <div class="project-links">
+                            <a href="https://github.com/Hermida95/password-generator" target="_blank"
+                                class="project-link" aria-label="GitHub Repository" title="Source Code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://hermida95.github.io/password-generator/" target="_blank"
+                                class="project-link" aria-label="Live App" title="Live App">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
                         </div>
                     </div>
-                </div>
 
-                <div class="proyecto">
-                    <img src="img/proker.jpg" alt="Proker" />
-                    <div class="proyecto-info">
-                        <h3>Proker - Logic Engine</h3>
-                        <p>Simulador de probabilidades de póker. Un desafío algorítmico que demuestra capacidad para traducir lógica matemática compleja a código funcional eficiente.</p>
-                        <div class="tech-used">
+                    <div class="project-row fade-in">
+                        <div class="project-row-info">
+                            <span class="project-overline" data-i18n="projects.p3.overline">Algorithmic
+                                Engineering</span>
+                            <h3 class="project-title cursor-hover-item" data-image="img/proker.jpg"
+                                style="display:inline-block;">Proker Logic Engine</h3>
+                            <p class="project-desc" data-i18n="projects.p3.desc">
+                                A high-performance poker probability simulator showcasing the translation of highly
+                                complex mathematical logic into functional code.
+                            </p>
+                        </div>
+                        <div class="project-tech">
                             <span>JavaScript</span>
-                            <span>Math Logic</span>
-                            <span>UI/UX</span>
+                            <span>Algorithmic Logic</span>
+                            <span>Math</span>
                         </div>
-                        <div class="proyecto-links">
-                            <a href="https://hermida95.github.io/Proker/" target="_blank">Ver Demo</a>
-                            <a href="https://github.com/Hermida95/Proker" target="_blank">Código</a>
+                        <div class="project-links">
+                            <a href="https://github.com/Hermida95/Proker" target="_blank" class="project-link"
+                                aria-label="GitHub Repository" title="Source Code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://hermida95.github.io/Proker/" target="_blank" class="project-link"
+                                aria-label="Live App" title="Live App">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
                         </div>
                     </div>
-                </div>
 
-            </div>
-        </div>
-    </section>
-
-    <section class="experiencia">
-        <div class="container">
-            <h2>Experiencia & Formación</h2>
-            <div class="timeline">
-                <div class="experiencia-item">
-                    <h3>Desarrollador en Prácticas</h3>
-                    <p class="periodo">2026 - Presente</p>
-                    <p>• Inicio de etapa profesional en entorno empresarial real.</p>
-                    <p>• Aplicación de metodologías ágiles y control de versiones en equipo.</p>
-                    <p>• Foco en desarrollo escalable y mantenimiento de código.</p>
-                </div>
-                <div class="experiencia-item">
-                    <h3>Grado Superior DAW</h3>
-                    <p class="periodo">2024 - 2026</p>
-                    <p>• Especialización en Desarrollo de Aplicaciones Web.</p>
-                    <p>• Proyectos Full Stack con Java, PHP y ecosistema JavaScript.</p>
-                    <p>• Despliegue de aplicaciones y administración de servidores básicos.</p>
-                </div>
-                <div class="experiencia-item">
-                    <h3>Gestión Comercial & Project Management</h3>
-                    <p class="periodo">2015 - 2022</p>
-                    <p>• Gestión integral de negocio retail propio.</p>
-                    <p>• Desarrollo de soft-skills: liderazgo, negociación y resolución de crisis.</p>
-                    <p>• Visión estratégica orientada a cliente y producto.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="contacto" id="contacto">
-        <div class="container">
-            <h2>Hablemos</h2>
-            <form action="https://formspree.io/f/your-form-id" method="POST">
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" required />
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2 class="section-title" data-i18n="experience.title">03. Career Trajectory<span class="dot">.</span>
+                </h2>
+                <div class="timeline">
 
-                <label for="email">Correo electrónico</label>
-                <input type="email" name="_replyto" id="email" required />
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-role" data-i18n="experience.e1.role">Software Engineer</h3>
+                            <span class="timeline-date" data-i18n="experience.e1.date">2024 &mdash; Present</span>
+                            <p class="timeline-details" data-i18n="experience.e1.desc">
+                                Operating in modern, agile corporate environments utilizing version control (Git) and
+                                containerized workflows (Docker). Strong emphasis on writing semantic, tested, and
+                                highly maintainable code to ensure long-term architectural stability.
+                            </p>
+                        </div>
+                    </div>
 
-                <label for="asunto">Asunto</label>
-                <select name="asunto" id="asunto" required>
-                    <option value="">Selecciona el motivo</option>
-                    <option value="oportunidad">Oportunidad Laboral / Prácticas</option>
-                    <option value="colaboracion">Colaboración Técnica</option>
-                    <option value="freelance">Proyecto Freelance</option>
-                    <option value="otro">Otro</option>
-                </select>
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-role" data-i18n="experience.e2.role">Higher Degree in Web Application
+                                Development (DAW)</h3>
+                            <span class="timeline-date" data-i18n="experience.e2.date">2024 &mdash; 2026</span>
+                            <p class="timeline-details" data-i18n="experience.e2.desc">
+                                Formalized deep technical skills traversing the entire stack. Engineering complex
+                                solutions with Java, PHP, and the modern JavaScript/TypeScript ecosystem. Extensive
+                                practice in advanced design patterns, server administration, and continuous integration.
+                            </p>
+                        </div>
+                    </div>
 
-                <label for="mensaje">Mensaje</label>
-                <textarea name="mensaje" id="mensaje" rows="5" placeholder="Hola Miguel, me gustaría hablar contigo sobre..." required></textarea>
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-role" data-i18n="experience.e3.role">Operations & Project Management
+                            </h3>
+                            <span class="timeline-date" data-i18n="experience.e3.date">2015 &mdash; 2022</span>
+                            <p class="timeline-details" data-i18n="experience.e3.desc">
+                                End-to-end management of retail operations. Developed resilient leadership, high-stakes
+                                negotiation skills, and a holistic, client-facing product strategy that directly
+                                translates into building software that meets precise user needs and business metrics.
+                            </p>
+                        </div>
+                    </div>
 
-                <button type="submit">Enviar Mensaje</button>
-            </form>
-        </div>
-    </section>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Miguel Garcia Hermida. Built with Clean Code.</p>
-            <p>
-                <a href="https://github.com/Hermida95" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
-                <a href="https://www.linkedin.com/in/miguel-garcía-hermida-796b67180/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
-                <a href="mailto:hermida95@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-            </p>
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-box fade-in">
+                    <h2 class="contact-title" data-i18n="contact.title">Let's build something scalable<span
+                            class="dot">.</span></h2>
+                    <p class="contact-desc" data-i18n="contact.desc">
+                        I am currently available for new opportunities. Whether you have a position open or just want to
+                        discuss software architecture, my inbox is open.
+                    </p>
+                    <a href="mailto:hermida95@gmail.com" class="btn btn-primary btn-large" data-i18n="contact.btn">Get
+                        in Touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="brand">Miguel Garcia Hermida</div>
+            <div class="copy" data-i18n="footer.copy">
+                &copy; <span id="year"></span> &mdash; Engineered with precision and Clean Code.
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/Hermida95" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/miguel-garcía-hermida-796b67180/" target="_blank"
+                    aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
         </div>
     </footer>
-    
 </body>
+
 </html>
