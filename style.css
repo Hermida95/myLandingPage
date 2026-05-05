@@ -809,7 +809,9 @@ section:last-of-type {
   }
 }
 
-/* --- Dropdown CV Styles --- */
+/* =========================================
+   12. DROPDOWN CV STYLES
+   ========================================= */
 .dropdown-cv {
   position: relative;
   display: inline-block;
@@ -822,11 +824,11 @@ section:last-of-type {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: var(--bg-color); /* Se adapta al modo oscuro/claro si lo tienes */
+  background-color: var(--bg-color); 
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  border: 1px solid var(--text-color);
-  border-radius: 8px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15); /* Sombra un poco más sutil */
+  border: 1px solid var(--border-color); /* Corregido a la variable real de tu tema */
+  border-radius: 4px; /* Cambiado a 4px para mantener la coherencia con los botones */
   z-index: 100;
   overflow: hidden;
   top: 110%;
@@ -834,17 +836,23 @@ section:last-of-type {
 }
 
 .dropdown-content a {
-  color: var(--text-color);
+  color: var(--text-main); /* Corregido a la variable real de tu tema */
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color var(--transition), color var(--transition);
 }
 
 .dropdown-content a:hover {
-  background-color: var(--primary-color);
+  background-color: var(--accent); /* Corregido a la variable real de tu tema */
   color: #fff;
+}
+
+/* Contraste perfecto para el modo oscuro al hacer hover */
+[data-theme="dark"] .dropdown-content a:hover {
+  color: #111; 
 }
 
 /* Mostrar el menú al pasar el ratón */
