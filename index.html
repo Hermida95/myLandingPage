@@ -53,8 +53,20 @@
     <main>
         <section class="hero slide-up">
             <div class="container">
-                <h1 class="hero-title">Miguel Garcia Hermida<span class="dot">.</span></h1>
-                <h2 class="hero-subtitle" data-i18n="hero.subtitle">Cloud Platform & AI Ops Engineer.</h2>
+                <h1 class="hero-title">Miguel Garcia Hermida<span class="dot">.</span><svg class="hero-cloud" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                        <path class="hc-outline" d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round" />
+                        <g class="hc-net" stroke="var(--accent)" stroke-width="0.7">
+                            <line x1="7.6" y1="14" x2="12" y2="10.8" />
+                            <line x1="12" y1="10.8" x2="16.4" y2="13.4" />
+                            <line x1="7.6" y1="14" x2="16.4" y2="13.4" />
+                        </g>
+                        <g class="hc-nodes" fill="var(--accent)">
+                            <circle cx="7.6" cy="14" r="1.15" />
+                            <circle cx="12" cy="10.8" r="1.15" />
+                            <circle cx="16.4" cy="13.4" r="1.15" />
+                        </g>
+                    </svg></h1>
+                <h2 class="hero-subtitle" data-i18n="hero.subtitle">Backend Developer · Cloud &amp; AI Ops Engineer.</h2>
                 <p class="hero-description" data-i18n="hero.desc">
                     Bridging software development, cloud infrastructure, and AI orchestration. Building with Node.js, Python, and AWS. Driven by Infrastructure as Code (Terraform), Kubernetes, and scalable CI/CD pipelines.
                 </p>
@@ -294,13 +306,25 @@
                 </h2>
                 <div class="timeline">
 
+                    <div class="timeline-item timeline-item--future fade-in">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-badge" data-i18n="experience.e0.badge">The Road Ahead</span>
+                            <h3 class="timeline-role" data-i18n="experience.e0.role">Cloud & DevOps Engineer</h3>
+                            <span class="timeline-date" data-i18n="experience.e0.date">Where I'm heading next</span>
+                            <p class="timeline-details" data-i18n="experience.e0.desc">
+                                Building on solid backend foundations, my goal is to grow into Cloud & DevOps engineering: deepening Infrastructure as Code (Terraform), container orchestration with Kubernetes, and CI/CD pipelines on AWS and GCP. I want to own the full path from code to resilient, automated production infrastructure.
+                            </p>
+                        </div>
+                    </div>
+
                     <div class="timeline-item fade-in">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <h3 class="timeline-role" data-i18n="experience.e1.role">Cloud Platform & AI Ops Engineer</h3>
+                            <h3 class="timeline-role" data-i18n="experience.e1.role">Backend Developer (Python)</h3>
                             <span class="timeline-date" data-i18n="experience.e1.date">2026 &mdash; Present</span>
                             <p class="timeline-details" data-i18n="experience.e1.desc">
-                                Specializing in highly available architectures (AWS) and Infrastructure as Code (Terraform). Deploying and scaling containerized applications with Docker and Kubernetes, while orchestrating LLMs and AI services via robust Node.js/Python backends and GitHub Actions CI/CD pipelines.
+                                Designing and building REST APIs with Python (FastAPI) and Node.js. Working with PostgreSQL and SQLAlchemy, JWT authentication, automated testing (pytest), and containerized environments with Docker — shipping clean, maintainable and well-tested backend services.
                             </p>
                         </div>
                     </div>
