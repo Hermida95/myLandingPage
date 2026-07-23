@@ -234,35 +234,37 @@ section:last-of-type {
   color: var(--text-main);
 }
 
-/* Language Toggle */
+/* Language Selector (EN / FR / ES) */
 .lang-toggle-wrapper {
   display: flex;
   align-items: center;
+  gap: 0.35rem;
 }
 
-.lang-toggle {
+.lang-option {
   background: none;
   border: none;
+  padding: 0;
+  font-family: inherit;
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text-muted);
   cursor: pointer;
   transition: color var(--transition);
-  font-family: inherit;
-  display: flex;
-  gap: 0.2rem;
 }
 
-.lang-active {
+.lang-option:hover {
   color: var(--text-main);
 }
 
-.lang-inactive {
-  transition: color var(--transition);
+.lang-option.active {
+  color: var(--text-main);
 }
 
-.lang-toggle:hover .lang-inactive {
-  color: var(--text-main);
+.lang-sep {
+  color: var(--text-muted);
+  font-weight: 400;
+  user-select: none;
 }
 
 /* =========================================

@@ -86,13 +86,53 @@ const translations = {
     "contact.desc": "Je suis actuellement disponible pour de nouvelles opportunités. Que vous ayez un poste ouvert dans l'écosystème vaudois ou que vous souhaitiez simplement discuter d'architecture Cloud et d'AI Ops, mon e-mail est ouvert.",
     "contact.btn": "Me Contacter",
     "footer.copy": "&copy; <span id=\"year\"></span> &mdash; Conçu avec précision et IaC."
+  },
+  es: {
+    "nav.about": "Perfil",
+    "nav.work": "Proyectos",
+    "nav.experience": "Experiencia",
+    "nav.contact": "Contacto",
+    "hero.subtitle": "Ingeniero Cloud Platform & AI Ops.",
+    "hero.desc": "Uniendo desarrollo de software, infraestructura cloud y orquestación de IA. Construyo con Node.js, Python y AWS. Guiado por la Infraestructura como Código (Terraform), Kubernetes y pipelines CI/CD escalables.",
+    "hero.cta": "Ver Proyectos",
+    "hero.cv": "Descargar CV",
+    "about.title": "01<span class=\"dot\">.</span> Sobre Mí<span class=\"dot\">.</span>",
+    "about.p1": "Soy Ingeniero Cloud Platform & AI Ops, tendiendo puentes entre una infraestructura sofisticada, la integración de inteligencia artificial y una lógica de negocio clara. Con una base forjada en la gestión empresarial, aporto una visión de producto madura a la tecnología, asegurando que los sistemas no solo sean resilientes, sino que resuelvan problemas reales de negocio de forma eficiente.",
+    "about.p2": "Mi núcleo técnico gira en torno al <strong>ecosistema AWS</strong>, los despliegues en contenedores con <strong>Docker y Kubernetes (K8s)</strong> y <strong>Terraform (IaC)</strong>. Construyo APIs robustas con <strong>Node.js y Python</strong> para conectar de forma fluida los datos empresariales con <strong>LLMs y modelos de IA (LangChain, RAG)</strong>, desplegándolos mediante pipelines automatizados de GitHub Actions.",
+    "about.p3": "<strong>Comunicación Global:</strong> Con una formación en Filología de Lenguas Modernas, mi dominio profesional del <strong>inglés</strong> y el <strong>francés</strong> es un activo clave. Me permite integrarme sin fricciones en hubs tecnológicos internacionales —en particular <strong>el cantón de Vaud y el ecosistema de la EPFL</strong>— traduciendo conceptos complejos de DevOps e IA a interlocutores no técnicos.",
+    "about.stack.cloud": "Cloud e Infraestructura",
+    "about.stack.devai": "Desarrollo & AI Ops",
+    "about.stack.automation": "Automatización & CI/CD",
+    "projects.title": "02<span class=\"dot\">.</span> Trabajos Seleccionados<span class=\"dot\">.</span>",
+    "projects.p4.overline": "PWA Cloud-Native",
+    "projects.p4.desc": "Una PWA full-stack de fitness y hábitos: rutinas de gimnasio periodizadas, rachas diarias, seguimiento de métricas corporales y notificaciones antisedentarismo programadas. Multiusuario con autenticación JWT, desplegada en GCP Cloud Run mediante Terraform y pipelines CI/CD de GitHub Actions.",
+    "projects.p1.overline": "Herramientas Empresariales",
+    "projects.p1.desc": "Una aplicación integral de gestión de personal centrada en Clean Architecture. Cálculos dinámicos de salario basados en las variables del contrato.",
+    "projects.p2.overline": "Infraestructura de Seguridad",
+    "projects.p2.desc": "Una utilidad de seguridad centrada en la privacidad, desarrollada en JavaScript puro (Vanilla). Emplea una generación de entropía robusta y optimizada sin dependencias externas.",
+    "projects.p3.overline": "Ingeniería Algorítmica",
+    "projects.p3.desc": "Un simulador de probabilidades de póker de alto rendimiento que demuestra la traducción de una lógica matemática muy compleja en código funcional.",
+    "experience.title": "03<span class=\"dot\">.</span> Trayectoria Profesional<span class=\"dot\">.</span>",
+    "experience.e1.role": "Ingeniero Cloud Platform & AI Ops",
+    "experience.e1.date": "2026 — Presente",
+    "experience.e1.desc": "Especializado en arquitecturas de alta disponibilidad (AWS) e Infraestructura como Código (Terraform). Despliegue y escalado de aplicaciones en contenedores con Docker y Kubernetes, orquestando LLMs y servicios de IA mediante backends robustos en Node.js/Python y pipelines CI/CD de GitHub Actions.",
+    "experience.e2.role": "Grado Superior en Desarrollo de Aplicaciones Web (DAW)",
+    "experience.e2.date": "2024 — 2026",
+    "experience.e2.desc": "Consolidación de competencias técnicas profundas a lo largo de todo el stack de software. Ingeniería de soluciones backend complejas, APIs REST y práctica intensiva en administración de bases de datos, despliegue de servidores y patrones de arquitectura modernos.",
+    "experience.e3.role": "Gestión de Operaciones y Proyectos",
+    "experience.e3.date": "2015 — 2022",
+    "experience.e3.desc": "Gestión integral de operaciones de retail. Desarrollo de un liderazgo resiliente, habilidades de negociación de alto nivel y una estrategia de producto orientada al cliente que se traduce directamente en construir infraestructura que responde a las necesidades precisas de los usuarios y a las métricas de negocio.",
+    "contact.title": "Construyamos infraestructura escalable<span class=\"dot\">.</span>",
+    "contact.desc": "Actualmente estoy disponible para nuevas oportunidades. Ya sea que tengas una posición abierta en el ecosistema de Vaud o simplemente quieras hablar de arquitectura Cloud y AI Ops, mi bandeja de entrada está abierta.",
+    "contact.btn": "Hablemos",
+    "footer.copy": "&copy; <span id=\"year\"></span> &mdash; Diseñado con precisión e IaC."
   }
 };
 
 class Portfolio {
   constructor() {
     this.themeToggleBtn = document.getElementById('themeToggle');
-    this.langToggleBtn = document.getElementById('langToggle');
+    this.langButtons = document.querySelectorAll('.lang-option');
     this.yearSpan = document.getElementById('year');
 
     // Initialize standard functionalities
@@ -149,31 +189,27 @@ class Portfolio {
    * Initializes Language system
    */
   setupLanguageManager() {
-    const currentLang = localStorage.getItem('lang') || 'en';
+    const savedLang = localStorage.getItem('lang');
+    const currentLang = translations[savedLang] ? savedLang : 'en';
     this.applyLanguage(currentLang);
 
-    if (this.langToggleBtn) {
-      this.langToggleBtn.addEventListener('click', () => {
-        const activeLang = document.documentElement.getAttribute('lang');
-        const newLang = activeLang === 'en' ? 'fr' : 'en';
-        this.applyLanguage(newLang);
+    this.langButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        this.applyLanguage(btn.getAttribute('data-lang'));
         this.setCopyrightYear(); // Fix year span inside i18n
       });
-    }
+    });
   }
 
   applyLanguage(lang) {
+    if (!translations[lang]) lang = 'en';
     document.documentElement.setAttribute('lang', lang);
     localStorage.setItem('lang', lang);
 
-    // Update Toggle UI
-    if (this.langToggleBtn) {
-      const activeSpan = this.langToggleBtn.querySelector('.lang-active');
-      const inactiveSpan = this.langToggleBtn.querySelector('.lang-inactive');
-
-      activeSpan.textContent = lang.toUpperCase();
-      inactiveSpan.textContent = lang === 'en' ? 'FR' : 'EN';
-    }
+    // Update selector UI: highlight the active language
+    this.langButtons.forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
 
     // Apply translations
     const elements = document.querySelectorAll('[data-i18n]');

@@ -14,6 +14,8 @@
         content="Building scalable cloud infrastructure and orchestrating AI solutions. Driven by Infrastructure as Code and robust CI/CD pipelines.">
     <meta property="og:image" content="https://hermida95.github.io/myLandingPage/img/Img-previsualizacion.png">
 
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -33,10 +35,12 @@
                 <a href="#experience" data-i18n="nav.experience">Experience</a>
             </nav>
             <div class="nav-actions">
-                <div class="lang-toggle-wrapper">
-                    <button id="langToggle" class="lang-toggle" aria-label="Toggle Language">
-                        <span class="lang-active">EN</span> / <span class="lang-inactive">FR</span>
-                    </button>
+                <div class="lang-toggle-wrapper" role="group" aria-label="Select language">
+                    <button class="lang-option" data-lang="en">EN</button>
+                    <span class="lang-sep" aria-hidden="true">/</span>
+                    <button class="lang-option" data-lang="fr">FR</button>
+                    <span class="lang-sep" aria-hidden="true">/</span>
+                    <button class="lang-option" data-lang="es">ES</button>
                 </div>
                 <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode">
                     <i class="fas fa-moon"></i>
@@ -145,7 +149,7 @@
                     </div>
                     <div class="about-profile fade-in">
                         <div class="image-wrapper">
-                            <img src="img/;.png" alt="Miguel Garcia Hermida" class="profile-img"
+                            <img src="img/profile.png" alt="Miguel Garcia Hermida" class="profile-img"
                                 onerror="this.src='https://ui-avatars.com/api/?name=Miguel+Garcia+Hermida&size=512&background=0D0D0D&color=fff'">
                         </div>
                         <div class="social-links">
