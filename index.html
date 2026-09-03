@@ -101,7 +101,7 @@
                             I'm a backend developer focused on <strong>Python (FastAPI/Django)</strong>. During my internship at <strong>Coinscrap Finance</strong> (fintech) I integrated <strong>LLMs in production</strong> and worked with microservices on <strong>GCP</strong>, in a real product environment. Before tech, I led teams and operations in retail for over 8 years — that experience gives me a read on business and customers that I bring to every system I build.
                         </p>
                         <p data-i18n="about.p2">
-                            My technical core is <strong>Python (FastAPI/Django)</strong>, REST APIs, <strong>PostgreSQL / SQLAlchemy</strong>, <strong>Docker</strong> and deployment on <strong>GCP</strong>. I integrate <strong>LLMs into production flows</strong> — not demos — with authentication, automated testing (pytest) and solid engineering practices. I'm currently expanding this profile toward Cloud/DevOps with the <strong>AWS SAA</strong> certification, <strong>Terraform</strong> and <strong>Kubernetes</strong>.
+                            My technical core is <strong>Python (FastAPI/Django)</strong>, with <strong>Node.js</strong> and <strong>TypeScript</strong> on the JavaScript side. REST APIs, <strong>PostgreSQL / SQLAlchemy</strong>, <strong>Docker</strong> and deployment on <strong>GCP</strong>. I integrate <strong>LLMs into production flows</strong> — not demos — with authentication, automated testing (pytest) and solid engineering practices. I'm currently expanding this profile toward Cloud/DevOps with the <strong>AWS SAA</strong> certification, <strong>Terraform</strong> and <strong>Kubernetes</strong>.
                         </p>
                         <p data-i18n="about.p3">
                             <strong>Communication:</strong> with a background in Modern Languages Philology, I have a professional command of <strong>English</strong> and <strong>French</strong>. I translate technical concepts — backend, AI, DevOps — into business language, which is key when the person across the table isn't technical.
@@ -109,12 +109,30 @@
                         <div class="stack-showcase fade-in">
                             
                             <div class="stack-category">
-                                <h4 class="stack-category-title" data-i18n="about.stack.core">Backend & APIs</h4>
+                                <h4 class="stack-category-title" data-i18n="about.stack.languages">Languages</h4>
                                 <div class="stack-grid">
                                     <div class="stack-item" style="--brand-color: #3776AB;">
                                         <i class="fab fa-python" style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--brand-color);"></i>
                                         <span>Python</span>
                                     </div>
+                                    <div class="stack-item" style="--brand-color: #3178C6;">
+                                        <i class="fas fa-code" style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--brand-color);"></i>
+                                        <span>TypeScript</span>
+                                    </div>
+                                    <div class="stack-item" style="--brand-color: #F7DF1E;">
+                                        <i class="fab fa-js" style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--brand-color);"></i>
+                                        <span>JavaScript</span>
+                                    </div>
+                                    <div class="stack-item" style="--brand-color: #339933;">
+                                        <i class="fab fa-node-js" style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--brand-color);"></i>
+                                        <span>Node.js</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stack-category">
+                                <h4 class="stack-category-title" data-i18n="about.stack.core">Backend & Data</h4>
+                                <div class="stack-grid">
                                     <div class="stack-item" style="--brand-color: #009688;">
                                         <i class="fas fa-bolt" style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--brand-color);"></i>
                                         <span>FastAPI / Django</span>
@@ -199,6 +217,32 @@
 
                     <div class="project-row fade-in">
                         <div class="project-row-info">
+                            <span class="project-overline" data-i18n="projects.invoice.overline">AI Agent · Document Automation</span>
+                            <h3 class="project-title cursor-hover-item" data-image="img/invoice.svg"
+                                style="display:inline-block;">Invoice Extraction Agent</h3>
+                            <p class="project-desc" data-i18n="projects.invoice.desc">
+                                An AI agent that turns invoice and delivery-note PDFs (text or scanned) into structured,
+                                validated data ready for Google Sheets. It doesn't blindly trust the LLM: it cross-checks
+                                amounts (lines vs. tax base vs. total) and flags anything that doesn't add up as
+                                needs_review instead of letting bad data through.
+                            </p>
+                        </div>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Claude (tool use + vision)</span>
+                            <span>Pydantic</span>
+                            <span>Streamlit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#freelance" class="project-link" aria-label="See the freelance service"
+                                title="See the freelance service">
+                                <i class="fas fa-briefcase"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-row fade-in">
+                        <div class="project-row-info">
                             <span class="project-overline" data-i18n="projects.p4.overline">Cloud-Native PWA</span>
                             <h3 class="project-title cursor-hover-item" data-image="img/training-tracker.svg"
                                 style="display:inline-block;">Training Tracker</h3>
@@ -224,6 +268,56 @@
 
                     <div class="project-row fade-in">
                         <div class="project-row-info">
+                            <span class="project-overline" data-i18n="projects.rehab.overline">Full-Stack · Healthtech</span>
+                            <h3 class="project-title cursor-hover-item" data-image="img/rehab.svg"
+                                style="display:inline-block;">REHAB</h3>
+                            <p class="project-desc" data-i18n="projects.rehab.desc">
+                                A therapeutic PWA for patients with acquired brain injury (stroke, TBI). Built under
+                                strict clinical-accessibility principles: near-zero cognitive load, oversized hitboxes,
+                                error-tolerant "magnetic" drag & drop and positive feedback. Production-grade deployment
+                                with hardened security (nginx, CSP).
+                            </p>
+                        </div>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>TypeScript</span>
+                            <span>FastAPI</span>
+                            <span>PostgreSQL</span>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+
+                    <div class="project-row fade-in">
+                        <div class="project-row-info">
+                            <span class="project-overline" data-i18n="projects.gitedu.overline">Developer Tool · Desktop</span>
+                            <h3 class="project-title cursor-hover-item" data-image="img/gitedu.png"
+                                style="display:inline-block;">GitEdu</h3>
+                            <p class="project-desc" data-i18n="projects.gitedu.desc">
+                                A desktop app that visualizes your local repositories as an interactive commit graph
+                                and — unlike most Git GUIs — shows the exact command it's about to run and its effect on
+                                the branch tree before running it. It even scripts interactive rebase with no terminal.
+                            </p>
+                        </div>
+                        <div class="project-tech">
+                            <span>Electron</span>
+                            <span>TypeScript</span>
+                            <span>React</span>
+                            <span>React Flow</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Hermida95/gitedu" target="_blank" class="project-link"
+                                aria-label="GitHub Repository" title="Source Code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://github.com/Hermida95/gitedu/releases/latest" target="_blank"
+                                class="project-link" aria-label="Download release" title="Download">
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-row fade-in">
+                        <div class="project-row-info">
                             <span class="project-overline" data-i18n="projects.p1.overline">Enterprise Tooling</span>
                             <h3 class="project-title cursor-hover-item" data-image="img/icon.png"
                                 style="display:inline-block;">EvaOS</h3>
@@ -243,62 +337,6 @@
                                 <i class="fab fa-github"></i>
                             </a>
                             <a href="https://eva-os-swart.vercel.app" target="_blank" class="project-link"
-                                aria-label="Live App" title="Live App">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="project-row fade-in">
-                        <div class="project-row-info">
-                            <span class="project-overline" data-i18n="projects.p2.overline">Security
-                                Infrastructure</span>
-                            <h3 class="project-title cursor-hover-item" data-image="img/PasswordGenerator.png"
-                                style="display:inline-block;">Secure Password Generator</h3>
-                            <p class="project-desc" data-i18n="projects.p2.desc">
-                                A privacy-first security utility engineered with pure JavaScript (Vanilla). Employs
-                                robust entropy generation optimized for zero external dependencies.
-                            </p>
-                        </div>
-                        <div class="project-tech">
-                            <span>JavaScript</span>
-                            <span>Cryptography Logic</span>
-                            <span>CSS3</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Hermida95/password-generator" target="_blank"
-                                class="project-link" aria-label="GitHub Repository" title="Source Code">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://hermida95.github.io/password-generator/" target="_blank"
-                                class="project-link" aria-label="Live App" title="Live App">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="project-row fade-in">
-                        <div class="project-row-info">
-                            <span class="project-overline" data-i18n="projects.p3.overline">Algorithmic
-                                Engineering</span>
-                            <h3 class="project-title cursor-hover-item" data-image="img/proker.jpg"
-                                style="display:inline-block;">Proker Logic Engine</h3>
-                            <p class="project-desc" data-i18n="projects.p3.desc">
-                                A high-performance poker probability simulator showcasing the translation of highly
-                                complex mathematical logic into functional code.
-                            </p>
-                        </div>
-                        <div class="project-tech">
-                            <span>JavaScript</span>
-                            <span>Algorithmic Logic</span>
-                            <span>Math</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Hermida95/Proker" target="_blank" class="project-link"
-                                aria-label="GitHub Repository" title="Source Code">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://hermida95.github.io/Proker/" target="_blank" class="project-link"
                                 aria-label="Live App" title="Live App">
                                 <i class="fas fa-external-link-alt"></i>
                             </a>
