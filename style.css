@@ -932,3 +932,160 @@ section:last-of-type {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* =========================================================
+   13. FREELANCE / FOR COMPANIES
+   Self-contained & removable. Deliberately dark in both
+   themes to read as a distinct, commercial band.
+   ========================================================= */
+.freelance {
+  background-color: #0d0d0d;
+  color: #f3f4f6;
+}
+
+.freelance .container {
+  max-width: 1000px;
+}
+
+.freelance-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #60a5fa;
+  margin-bottom: 1.5rem;
+}
+
+.freelance-title {
+  font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  max-width: 42ch;
+  margin-bottom: 3.5rem;
+}
+
+.freelance-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 720px) {
+  .freelance-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.freelance-card {
+  background-color: #171717;
+  border: 1px solid #262626;
+  border-radius: 8px;
+  padding: 1.75rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.freelance-card:hover {
+  transform: translateY(-4px);
+  border-color: #60a5fa;
+}
+
+.freelance-card-icon {
+  font-size: 1.75rem;
+  color: #60a5fa;
+  margin-bottom: 1rem;
+}
+
+.freelance-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: #f3f4f6;
+}
+
+.freelance-card-desc {
+  font-size: 0.95rem;
+  color: #a1a1aa;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.freelance-includes {
+  background-color: #171717;
+  border: 1px solid #262626;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.freelance-includes-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: #f3f4f6;
+}
+
+.freelance-includes-list {
+  list-style: none;
+  display: grid;
+  gap: 0.85rem;
+}
+
+@media (min-width: 720px) {
+  .freelance-includes-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.freelance-includes-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: #d4d4d8;
+}
+
+.freelance-includes-list i {
+  color: #60a5fa;
+  margin-top: 0.3rem;
+  flex-shrink: 0;
+}
+
+.freelance-includes-list strong {
+  color: #f3f4f6;
+}
+
+.freelance-authority {
+  border-left: 3px solid #60a5fa;
+  padding-left: 1.5rem;
+  margin: 0 0 3rem;
+  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  font-weight: 500;
+  line-height: 1.5;
+  color: #f3f4f6;
+  max-width: 48ch;
+}
+
+.freelance-cta {
+  text-align: center;
+}
+
+.freelance-cta .btn-primary {
+  background-color: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+
+.freelance-cta .btn-primary:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.freelance-cta-note {
+  margin: 1.25rem auto 0;
+  font-size: 0.95rem;
+  color: #a1a1aa;
+  max-width: 46ch;
+}
