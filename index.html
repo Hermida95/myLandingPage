@@ -33,7 +33,7 @@
                 <a href="#about" data-i18n="nav.about">About</a>
                 <a href="#projects" data-i18n="nav.work">Work</a>
                 <a href="#experience" data-i18n="nav.experience">Experience</a>
-                <a href="#freelance" data-i18n="nav.freelance">For Companies</a>
+                <a href="#freelance" data-i18n="nav.freelance">Services</a>
             </nav>
             <div class="nav-actions">
                 <div class="lang-toggle-wrapper" role="group" aria-label="Select language">
@@ -347,6 +347,84 @@
             </div>
         </section>
 
+<!-- =========================================================
+     SERVICES — FREELANCE / FOR COMPANIES & CLINICS
+     Self-contained section. To remove: delete this block, the
+     ".freelance*" CSS block in style.css, and the "freelance.*"
+     + "nav.freelance" keys in script.js.
+     ========================================================= -->
+        <section id="freelance" class="freelance">
+            <div class="container">
+                <span class="freelance-eyebrow" data-i18n="freelance.eyebrow">AI &amp; custom development · for companies and clinics</span>
+                <h2 class="freelance-title" data-i18n="freelance.hero">
+                    I take AI agents to production and build the custom software around them: I connect them to your systems — ERP, CRM, your calendar or spreadsheet — and leave them running, monitored and documented. Not a pilot that ends up in a drawer.
+                </h2>
+                <p class="freelance-credibility" data-i18n="freelance.credibility">
+                    I've worked in fintech (Coinscrap) and built clinical software (REHAB): I'm comfortable in environments with sensitive data and processes that leave no room for error.
+                </p>
+
+                <div class="freelance-grid">
+                    <article class="freelance-card">
+                        <i class="fas fa-file-invoice freelance-card-icon" aria-hidden="true"></i>
+                        <h3 class="freelance-card-title" data-i18n="freelance.uc1.title">Invoice & document reading with AI</h3>
+                        <p class="freelance-card-desc" data-i18n="freelance.uc1.desc">
+                            I extract data from invoices, delivery notes or contracts using AI vision and return it structured in your Google Sheet or system. No more manual typing.
+                        </p>
+                    </article>
+                    <article class="freelance-card">
+                        <i class="fab fa-whatsapp freelance-card-icon" aria-hidden="true"></i>
+                        <h3 class="freelance-card-title" data-i18n="freelance.uc2.title">WhatsApp customer agent</h3>
+                        <p class="freelance-card-desc" data-i18n="freelance.uc2.desc">
+                            Automated FAQs and bookings over WhatsApp, connected to your Google Calendar. Twilio + Claude handling your customers, with handover to a person when needed.
+                        </p>
+                    </article>
+                    <article class="freelance-card">
+                        <i class="fas fa-diagram-project freelance-card-icon" aria-hidden="true"></i>
+                        <h3 class="freelance-card-title" data-i18n="freelance.uc3.title">Automation wired to your systems</h3>
+                        <p class="freelance-card-desc" data-i18n="freelance.uc3.desc">
+                            I connect AI to your ERP/CRM to automate repetitive processes: classifying, replying and moving data between tools that today don't talk to each other.
+                        </p>
+                    </article>
+                    <article class="freelance-card">
+                        <i class="fas fa-stethoscope freelance-card-icon" aria-hidden="true"></i>
+                        <h3 class="freelance-card-title" data-i18n="freelance.uc4.title">Clinics & practices: automated front desk</h3>
+                        <p class="freelance-card-desc" data-i18n="freelance.uc4.desc">
+                            Book appointments, send reminders that cut no-shows and answer common patient questions over WhatsApp, connected to your calendar. Less phone time at reception, fewer empty slots. Patient data handled per GDPR.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="freelance-includes">
+                    <h3 class="freelance-includes-title" data-i18n="freelance.includes.title">What a typical project includes</h3>
+                    <ul class="freelance-includes-list">
+                        <li><i class="fas fa-check" aria-hidden="true"></i><span data-i18n="freelance.includes.i1"><strong>Real production, not a demo:</strong> deployed and running on your data.</span></li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i><span data-i18n="freelance.includes.i2"><strong>Monitoring:</strong> if something breaks, it's detected and flagged.</span></li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i><span data-i18n="freelance.includes.i3"><strong>Documentation & handover:</strong> your team understands and maintains what I deliver.</span></li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i><span data-i18n="freelance.includes.i5"><strong>Sensitive data handled with care:</strong> no private data exposed, GDPR-compliant.</span></li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i><span data-i18n="freelance.includes.i4"><strong>Optional monthly maintenance:</strong> reviews, tweaks and ongoing support.</span></li>
+                    </ul>
+                </div>
+
+                <p class="freelance-dev" data-i18n="freelance.dev">
+                    Not an AI project? I also build custom backends, APIs and applications.
+                </p>
+
+                <blockquote class="freelance-authority" data-i18n="freelance.authority">
+                    90% of AI projects fail on adoption, not on tech. I led teams for 8 years: I know how to get people to actually use the tool, not just how to build it.
+                </blockquote>
+
+                <div class="freelance-cta">
+                    <a class="btn btn-primary btn-large"
+                        href="mailto:hermida95@gmail.com?subject=Servicios%20%E2%80%94%20IA%20y%20desarrollo%20a%20medida&body=Hola%20Miguel%2C%20el%20proceso%20que%20nos%20est%C3%A1%20costando%20tiempo%20es%3A%20"
+                        data-i18n="freelance.cta.btn">Tell me your process</a>
+                    <p class="freelance-cta-note" data-i18n="freelance.cta.note">
+                        Tell me which process is costing your team time. In 20 minutes we'll see if it makes sense — no strings attached.
+                    </p>
+                </div>
+            </div>
+        </section>
+<!-- ================= END SERVICES SECTION ================= -->
+
         <section id="experience" class="experience">
             <div class="container">
                 <h2 class="section-title" data-i18n="experience.title">03. Career Trajectory<span class="dot">.</span>
@@ -403,69 +481,6 @@
                 </div>
             </div>
         </section>
-
-<!-- =========================================================
-     FREELANCE / FOR COMPANIES — self-contained section.
-     To remove: delete this block, the ".freelance*" CSS block
-     in style.css, and the "freelance.*" + "nav.freelance" keys
-     in script.js.
-     ========================================================= -->
-        <section id="freelance" class="freelance">
-            <div class="container">
-                <span class="freelance-eyebrow" data-i18n="freelance.eyebrow">For companies · Freelance</span>
-                <h2 class="freelance-title" data-i18n="freelance.hero">
-                    I take AI agents to production in mid-sized companies: I connect them to your ERP/CRM with Python and leave them running, monitored and documented — not a pilot that ends up in a drawer.
-                </h2>
-
-                <div class="freelance-grid">
-                    <article class="freelance-card">
-                        <i class="fas fa-file-invoice freelance-card-icon" aria-hidden="true"></i>
-                        <h3 class="freelance-card-title" data-i18n="freelance.uc1.title">Invoice & document reading with AI</h3>
-                        <p class="freelance-card-desc" data-i18n="freelance.uc1.desc">
-                            I extract data from invoices, delivery notes or contracts using AI vision and return it structured in your Google Sheet or system. No more manual typing.
-                        </p>
-                    </article>
-                    <article class="freelance-card">
-                        <i class="fab fa-whatsapp freelance-card-icon" aria-hidden="true"></i>
-                        <h3 class="freelance-card-title" data-i18n="freelance.uc2.title">WhatsApp customer agent</h3>
-                        <p class="freelance-card-desc" data-i18n="freelance.uc2.desc">
-                            Automated FAQs and bookings over WhatsApp, connected to your Google Calendar. Twilio + Claude handling your customers, with handover to a person when needed.
-                        </p>
-                    </article>
-                    <article class="freelance-card">
-                        <i class="fas fa-diagram-project freelance-card-icon" aria-hidden="true"></i>
-                        <h3 class="freelance-card-title" data-i18n="freelance.uc3.title">Automation wired to your systems</h3>
-                        <p class="freelance-card-desc" data-i18n="freelance.uc3.desc">
-                            I connect AI to your ERP/CRM to automate repetitive processes: classifying, replying and moving data between tools that today don't talk to each other.
-                        </p>
-                    </article>
-                </div>
-
-                <div class="freelance-includes">
-                    <h3 class="freelance-includes-title" data-i18n="freelance.includes.title">What a typical project includes</h3>
-                    <ul class="freelance-includes-list">
-                        <li><i class="fas fa-check" aria-hidden="true"></i><span data-i18n="freelance.includes.i1"><strong>Real production, not a demo:</strong> deployed and running on your data.</span></li>
-                        <li><i class="fas fa-check" aria-hidden="true"></i><span data-i18n="freelance.includes.i2"><strong>Monitoring:</strong> if something breaks, it's detected and flagged.</span></li>
-                        <li><i class="fas fa-check" aria-hidden="true"></i><span data-i18n="freelance.includes.i3"><strong>Documentation & handover:</strong> your team understands and maintains what I deliver.</span></li>
-                        <li><i class="fas fa-check" aria-hidden="true"></i><span data-i18n="freelance.includes.i4"><strong>Optional monthly maintenance:</strong> reviews, tweaks and ongoing support.</span></li>
-                    </ul>
-                </div>
-
-                <blockquote class="freelance-authority" data-i18n="freelance.authority">
-                    90% of AI projects fail on adoption, not on tech. I led teams for 8 years: I know how to get people to actually use the tool, not just how to build it.
-                </blockquote>
-
-                <div class="freelance-cta">
-                    <a class="btn btn-primary btn-large"
-                        href="mailto:hermida95@gmail.com?subject=Integraci%C3%B3n%20de%20IA%20para%20empresa&body=Hola%20Miguel%2C%20el%20proceso%20que%20nos%20est%C3%A1%20costando%20tiempo%20es%3A%20"
-                        data-i18n="freelance.cta.btn">Tell me your process</a>
-                    <p class="freelance-cta-note" data-i18n="freelance.cta.note">
-                        Tell me which process is costing your team time. In 20 minutes we'll see if it makes sense — no strings attached.
-                    </p>
-                </div>
-            </div>
-        </section>
-<!-- ================= END FREELANCE SECTION ================= -->
 
         <section id="contact" class="contact">
             <div class="container">
