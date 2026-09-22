@@ -1,8 +1,14 @@
 /**
  * scripts.js
- * 
+ *
  * Clean Code Implementation for Miguel Garcia Hermida Portfolio
  * Features: OOP architecture, Theme Management, Intersection Observer, i18n, Interactive Hover Effects
+ *
+ * Language model:
+ *  - Default language is Spanish (sales-first, target market = Spain).
+ *  - The sales content (Servicios, FAQ, sales hero copy) is Spanish-only and
+ *    hardcoded in index.html; elements tagged data-lang-only="es" are shown only
+ *    when the active language is Spanish, so EN/FR render a clean technical portfolio.
  */
 
 // Translations Dictionary
@@ -11,11 +17,10 @@ const translations = {
     "nav.about": "About",
     "nav.work": "Work",
     "nav.experience": "Experience",
-    "nav.freelance": "Services",
     "nav.contact": "Contact",
     "hero.subtitle": "Backend Developer — Python · LLMs in production · Cloud (GCP/AWS).",
     "hero.desc": "I design and build backends in Python (FastAPI/Django) and take LLMs to production: microservices on GCP, robust APIs and Docker deployments. I come from 8+ years leading teams and operations in retail, so I build with the business — and whoever will use it — in mind. Currently expanding into Cloud/DevOps (AWS SAA, Terraform, Kubernetes).",
-    "hero.cta": "View Projects",
+    "hero.whatsapp": "Message me on WhatsApp",
     "hero.cv": "Download CV",
     "about.title": "01<span class=\"dot\">.</span> About Me<span class=\"dot\">.</span>",
     "about.p1": "I'm a backend developer focused on <strong>Python (FastAPI/Django)</strong>. During my internship at <strong>Coinscrap Finance</strong> (fintech) I integrated <strong>LLMs in production</strong> and worked with microservices on <strong>GCP</strong>, in a real product environment. Before tech, I led teams and operations in retail for over 8 years — that experience gives me a read on business and customers that I bring to every system I build.",
@@ -52,39 +57,18 @@ const translations = {
     "experience.e3.desc": "Over 8 years leading teams and end-to-end operations in retail. Direct client contact, high-stakes negotiation and, above all, getting people to actually adopt new tools and processes — the part that decides whether technology delivers or gathers dust.",
     "contact.title": "Let's build something solid<span class=\"dot\">.</span>",
     "contact.desc": "I'm open to backend roles and to freelance AI-integration projects. Tell me what you're working on and we'll see if I can help.",
-    "contact.btn": "Get in Touch",
-    "freelance.eyebrow": "AI & custom development · for companies and clinics",
-    "freelance.hero": "I take AI agents to production and build the custom software around them: I connect them to your systems — ERP, CRM, your calendar or spreadsheet — and leave them running, monitored and documented. Not a pilot that ends up in a drawer.",
-    "freelance.credibility": "I've worked in fintech (Coinscrap) and built clinical software (REHAB): I'm comfortable in environments with sensitive data and processes that leave no room for error.",
-    "freelance.uc1.title": "Invoice & document reading with AI",
-    "freelance.uc1.desc": "I extract data from invoices, delivery notes or contracts using AI vision and return it structured in your Google Sheet or system. No more manual typing.",
-    "freelance.uc2.title": "WhatsApp customer agent",
-    "freelance.uc2.desc": "Automated FAQs and bookings over WhatsApp, connected to your Google Calendar. Twilio + Claude handling your customers, with handover to a person when needed.",
-    "freelance.uc3.title": "Automation wired to your systems",
-    "freelance.uc3.desc": "I connect AI to your ERP/CRM to automate repetitive processes: classifying, replying and moving data between tools that today don't talk to each other.",
-    "freelance.uc4.title": "Clinics & practices: automated front desk",
-    "freelance.uc4.desc": "Book appointments, send reminders that cut no-shows and answer common patient questions over WhatsApp, connected to your calendar. Less phone time at reception, fewer empty slots. Patient data handled per GDPR.",
-    "freelance.includes.title": "What a typical project includes",
-    "freelance.includes.i1": "<strong>Real production, not a demo:</strong> deployed and running on your data.",
-    "freelance.includes.i2": "<strong>Monitoring:</strong> if something breaks, it's detected and flagged.",
-    "freelance.includes.i3": "<strong>Documentation & handover:</strong> your team understands and maintains what I deliver.",
-    "freelance.includes.i5": "<strong>Sensitive data handled with care:</strong> no private data exposed, GDPR-compliant.",
-    "freelance.includes.i4": "<strong>Optional monthly maintenance:</strong> reviews, tweaks and ongoing support.",
-    "freelance.dev": "Not an AI project? I also build custom backends, APIs and applications.",
-    "freelance.authority": "90% of AI projects fail on adoption, not on tech. I led teams for 8 years: I know how to get people to actually use the tool, not just how to build it.",
-    "freelance.cta.btn": "Tell me your process",
-    "freelance.cta.note": "Tell me which process is costing your team time. In 20 minutes we'll see if it makes sense — no strings attached.",
+    "contact.whatsapp": "Message me on WhatsApp",
+    "contact.btn": "Email me",
     "footer.copy": "&copy; <span id=\"year\"></span> &mdash; Engineered with precision and IaC."
   },
   fr: {
     "nav.about": "À Propos",
     "nav.work": "Projets",
     "nav.experience": "Expérience",
-    "nav.freelance": "Services",
     "nav.contact": "Contact",
     "hero.subtitle": "Développeur Backend — Python · LLM en production · Cloud (GCP/AWS).",
     "hero.desc": "Je conçois et développe des backends en Python (FastAPI/Django) et je mets des LLM en production : microservices sur GCP, API robustes et déploiements Docker. Je viens de plus de 8 ans à diriger des équipes et des opérations dans le retail, donc je construis en pensant au business — et à qui va l'utiliser. J'élargis actuellement mon profil vers le Cloud/DevOps (AWS SAA, Terraform, Kubernetes).",
-    "hero.cta": "Voir les Projets",
+    "hero.whatsapp": "Écrivez-moi sur WhatsApp",
     "hero.cv": "Télécharger le CV",
     "about.title": "01<span class=\"dot\">.</span> À Propos de Moi<span class=\"dot\">.</span>",
     "about.p1": "Je suis développeur backend spécialisé en <strong>Python (FastAPI/Django)</strong>. Lors de mon stage chez <strong>Coinscrap Finance</strong> (fintech), j'ai intégré des <strong>LLM en production</strong> et travaillé avec des microservices sur <strong>GCP</strong>, dans un environnement produit réel. Avant la tech, j'ai dirigé des équipes et des opérations dans le retail pendant plus de 8 ans — une expérience qui me donne une lecture du business et du client que j'applique à chaque système que je construis.",
@@ -121,44 +105,23 @@ const translations = {
     "experience.e3.desc": "Plus de 8 ans à diriger des équipes et des opérations de bout en bout dans le retail. Contact client direct, négociation à forts enjeux et, surtout, faire adopter réellement de nouveaux outils et processus — ce qui décide si la technologie apporte de la valeur ou prend la poussière.",
     "contact.title": "Construisons quelque chose de solide<span class=\"dot\">.</span>",
     "contact.desc": "Je suis ouvert aux postes backend et aux projets freelance d'intégration d'IA. Dites-moi sur quoi vous travaillez et nous verrons si je peux aider.",
-    "contact.btn": "Me Contacter",
-    "freelance.eyebrow": "IA & développement sur mesure · entreprises et cliniques",
-    "freelance.hero": "Je mets des agents d'IA en production et je construis le logiciel sur mesure autour : je les connecte à vos systèmes — ERP, CRM, votre agenda ou tableur — et je vous les laisse opérationnels, monitorés et documentés. Pas un pilote qui finit dans un tiroir.",
-    "freelance.credibility": "J'ai travaillé dans la fintech (Coinscrap) et développé un logiciel clinique (REHAB) : je suis à l'aise dans les environnements à données sensibles et processus sans droit à l'erreur.",
-    "freelance.uc1.title": "Lecture de factures et documents par IA",
-    "freelance.uc1.desc": "J'extrais les données de factures, bons de livraison ou contrats par vision IA et je les renvoie structurées dans votre Google Sheets ou système. Fini la saisie manuelle.",
-    "freelance.uc2.title": "Agent client sur WhatsApp",
-    "freelance.uc2.desc": "FAQ et réservations automatisées sur WhatsApp, connecté à votre Google Calendar. Twilio + Claude au service de vos clients, avec transfert à une personne si nécessaire.",
-    "freelance.uc3.title": "Automatisation reliée à vos systèmes",
-    "freelance.uc3.desc": "Je connecte l'IA à votre ERP/CRM pour automatiser les processus répétitifs : classer, répondre et faire circuler les données entre des outils qui aujourd'hui ne se parlent pas.",
-    "freelance.uc4.title": "Cliniques & cabinets : accueil automatisé",
-    "freelance.uc4.desc": "Prise de rendez-vous, rappels qui réduisent les absences et réponses aux questions fréquentes des patients sur WhatsApp, connecté à votre agenda. Moins de téléphone à l'accueil, moins de créneaux vides. Données patients conformes au RGPD.",
-    "freelance.includes.title": "Ce qu'inclut un projet type",
-    "freelance.includes.i1": "<strong>Production réelle, pas une démo :</strong> déployé et opérationnel sur vos données.",
-    "freelance.includes.i2": "<strong>Monitoring :</strong> si quelque chose casse, c'est détecté et signalé.",
-    "freelance.includes.i3": "<strong>Documentation & handover :</strong> votre équipe comprend et maintient ce que je livre.",
-    "freelance.includes.i5": "<strong>Données sensibles avec soin :</strong> aucune donnée privée exposée, conforme au RGPD.",
-    "freelance.includes.i4": "<strong>Maintenance mensuelle en option :</strong> révisions, ajustements et support continu.",
-    "freelance.dev": "Pas un projet d'IA ? Je développe aussi des backends, API et applications sur mesure.",
-    "freelance.authority": "90% des projets d'IA échouent sur l'adoption, pas sur la technique. J'ai dirigé des équipes pendant 8 ans : je sais faire en sorte que les gens utilisent réellement l'outil, pas seulement le construire.",
-    "freelance.cta.btn": "Parlez-moi de votre processus",
-    "freelance.cta.note": "Dites-moi quel processus vous fait perdre du temps. En 20 minutes, on voit si ça a du sens — sans engagement.",
+    "contact.whatsapp": "Écrivez-moi sur WhatsApp",
+    "contact.btn": "M'écrire un email",
     "footer.copy": "&copy; <span id=\"year\"></span> &mdash; Conçu avec précision et IaC."
   },
   es: {
     "nav.about": "Perfil",
     "nav.work": "Proyectos",
     "nav.experience": "Experiencia",
-    "nav.freelance": "Servicios",
     "nav.contact": "Contacto",
-    "hero.subtitle": "Desarrollador Backend — Python · LLM en producción · Cloud (GCP/AWS).",
-    "hero.desc": "Diseño e implemento backends en Python (FastAPI/Django) y llevo LLM a producción: microservicios en GCP, APIs robustas y despliegues con Docker. Vengo de más de 8 años dirigiendo equipos y operaciones en retail, así que construyo pensando en el negocio — y en quién va a usar lo que entrego. Ahora amplío perfil hacia Cloud/DevOps (AWS SAA, Terraform, Kubernetes).",
-    "hero.cta": "Ver Proyectos",
+    "hero.subtitle": "Automatizo la atención al cliente y la captación de leads con IA.",
+    "hero.desc": "Agentes de IA que contestan WhatsApp a cualquier hora, agenda de citas, captación de leads y automatizaciones a medida para <strong>clínicas, inmobiliarias, fisioterapeutas y autónomos</strong>. Menos tareas repetitivas, cero clientes perdidos por no contestar a tiempo — y te lo dejo funcionando, no un piloto que se queda en el cajón.",
+    "hero.whatsapp": "Escríbeme por WhatsApp",
     "hero.cv": "Descargar CV",
     "about.title": "01<span class=\"dot\">.</span> Sobre Mí<span class=\"dot\">.</span>",
-    "about.p1": "Soy desarrollador backend centrado en <strong>Python (FastAPI/Django)</strong>. En mis prácticas en <strong>Coinscrap Finance</strong> (fintech) integré <strong>LLM en producción</strong> y trabajé con microservicios en <strong>GCP</strong>, en un entorno de producto real. Antes de la tecnología dirigí equipos y operaciones en retail durante más de 8 años — esa experiencia me da una lectura de negocio y de cliente que aplico a cada sistema que construyo.",
-    "about.p2": "Mi núcleo técnico es <strong>Python (FastAPI/Django)</strong>, con <strong>Node.js</strong> y <strong>TypeScript</strong> en el lado JavaScript. APIs REST, <strong>PostgreSQL / SQLAlchemy</strong>, <strong>Docker</strong> y despliegue en <strong>GCP</strong>. Integro <strong>LLM en flujos de producción</strong> —no en demos— con autenticación, tests automatizados (pytest) y buenas prácticas de ingeniería. Estoy ampliando este perfil hacia Cloud/DevOps con la certificación <strong>AWS SAA</strong>, <strong>Terraform</strong> y <strong>Kubernetes</strong>.",
-    "about.p3": "<strong>Comunicación:</strong> con una formación en Filología de Lenguas Modernas, tengo un dominio profesional del <strong>inglés</strong> y el <strong>francés</strong>. Traduzco conceptos técnicos —backend, IA, DevOps— a lenguaje de negocio, algo clave cuando el interlocutor no es técnico.",
+    "about.p1": "Soy ingeniero de software y, antes de la tecnología, dirigí equipos y operaciones durante más de 8 años. Esa mezcla —saber construir de verdad y saber cómo funciona un negocio por dentro— es justo lo que hace que lo que entrego se use y dé resultados, en vez de quedarse en un cajón. He integrado <strong>IA en producción en fintech (Coinscrap)</strong> y construido <strong>software clínico (REHAB)</strong>, así que me manejo con datos sensibles y con lo que de verdad importa a un negocio.",
+    "about.p2": "En lo técnico, mi núcleo es <strong>Python (FastAPI/Django)</strong>, con <strong>Node.js</strong> y <strong>TypeScript</strong> en el lado JavaScript. APIs REST, <strong>PostgreSQL / SQLAlchemy</strong>, <strong>Docker</strong> y despliegue en <strong>GCP</strong>. Integro <strong>LLM en flujos de producción</strong> —no en demos— con autenticación, tests automatizados (pytest) y buenas prácticas. Estoy ampliando perfil hacia Cloud/DevOps con la certificación <strong>AWS SAA</strong>, <strong>Terraform</strong> y <strong>Kubernetes</strong>.",
+    "about.p3": "<strong>Comunicación:</strong> con una formación en Filología de Lenguas Modernas, tengo un dominio profesional del <strong>inglés</strong> y el <strong>francés</strong>. Traduzco lo técnico —IA, backend, automatización— a lenguaje de negocio, algo clave cuando el interlocutor no es técnico.",
     "about.stack.languages": "Lenguajes",
     "about.stack.core": "Backend y Datos",
     "about.stack.ai": "IA en producción & Cloud",
@@ -188,30 +151,10 @@ const translations = {
     "experience.e3.role": "Gestión de equipos y operaciones (Retail)",
     "experience.e3.date": "8+ años · hasta 2022",
     "experience.e3.desc": "Más de 8 años dirigiendo equipos y operaciones de principio a fin en retail. Trato directo con cliente, negociación de alto nivel y, sobre todo, conseguir que la gente adopte de verdad nuevas herramientas y procesos — la parte que decide si la tecnología aporta o se queda en un cajón.",
-    "contact.title": "Construyamos algo sólido<span class=\"dot\">.</span>",
-    "contact.desc": "Estoy abierto a posiciones backend y a proyectos freelance de integración de IA. Cuéntame en qué trabajas y vemos si puedo ayudar.",
-    "contact.btn": "Hablemos",
-    "freelance.eyebrow": "IA y desarrollo a medida · para empresas y clínicas",
-    "freelance.hero": "Llevo agentes de IA a producción y construyo el software a medida que los rodea: los conecto a tus sistemas —ERP, CRM, tu agenda u hoja de cálculo— y te los dejo funcionando, monitorizados y documentados. No un piloto que se queda en el cajón.",
-    "freelance.credibility": "He trabajado en fintech (Coinscrap) y he construido software clínico (REHAB): me muevo bien en entornos con datos sensibles y procesos que no admiten errores.",
-    "freelance.uc1.title": "Lectura de facturas y documentos con IA",
-    "freelance.uc1.desc": "Extraigo datos de facturas, albaranes o contratos con visión por IA y los devuelvo estructurados en tu Google Sheets o sistema. Se acabó teclear a mano.",
-    "freelance.uc2.title": "Agente de atención por WhatsApp",
-    "freelance.uc2.desc": "FAQs y reservas automatizadas por WhatsApp, conectado a tu Google Calendar. Twilio + Claude atendiendo a tus clientes, con traspaso a una persona cuando hace falta.",
-    "freelance.uc3.title": "Automatización conectada a tus sistemas",
-    "freelance.uc3.desc": "Conecto la IA a tu ERP/CRM para automatizar procesos repetitivos: clasificar, responder y mover datos entre herramientas que hoy no se hablan.",
-    "freelance.uc4.title": "Clínicas y consultas: recepción automatizada",
-    "freelance.uc4.desc": "Agenda citas, envía recordatorios que reducen las ausencias y responde dudas frecuentes de pacientes por WhatsApp, conectado a tu calendario. Menos teléfono en recepción, menos huecos vacíos. Datos de pacientes conforme al RGPD.",
-    "freelance.includes.title": "Qué incluye un proyecto tipo",
-    "freelance.includes.i1": "<strong>Producción real, no demo:</strong> desplegado y funcionando con tus datos.",
-    "freelance.includes.i2": "<strong>Monitorización:</strong> si algo falla, se detecta y se avisa.",
-    "freelance.includes.i3": "<strong>Documentación y handover:</strong> tu equipo entiende y mantiene lo que entrego.",
-    "freelance.includes.i5": "<strong>Datos sensibles con cuidado:</strong> sin exponer información privada y conforme al RGPD.",
-    "freelance.includes.i4": "<strong>Mantenimiento mensual opcional:</strong> revisiones, ajustes y soporte continuo.",
-    "freelance.dev": "¿No es un proyecto de IA? También desarrollo backends, APIs y aplicaciones a medida.",
-    "freelance.authority": "El 90% de los proyectos de IA fracasan por adopción, no por técnica. Dirigí equipos durante 8 años: sé hacer que la gente use la herramienta, no solo construirla.",
-    "freelance.cta.btn": "Cuéntame tu proceso",
-    "freelance.cta.note": "Cuéntame qué proceso os está costando tiempo. En 20 minutos vemos si tiene sentido — sin compromiso.",
+    "contact.title": "¿Hablamos?<span class=\"dot\">.</span>",
+    "contact.desc": "Cuéntame qué proceso te está costando tiempo o qué te gustaría automatizar. En una llamada corta vemos si tiene sentido — sin compromiso. ¿Prefieres contratarme como desarrollador? También estoy abierto a ello.",
+    "contact.whatsapp": "Escríbeme por WhatsApp",
+    "contact.btn": "Enviar un email",
     "footer.copy": "&copy; <span id=\"year\"></span> &mdash; Diseñado con precisión e IaC."
   }
 };
@@ -220,6 +163,7 @@ class Portfolio {
   constructor() {
     this.themeToggleBtn = document.getElementById('themeToggle');
     this.langButtons = document.querySelectorAll('.lang-option');
+    this.langScopedEls = document.querySelectorAll('[data-lang-only]');
     this.yearSpan = document.getElementById('year');
 
     // Initialize standard functionalities
@@ -273,11 +217,11 @@ class Portfolio {
   }
 
   /**
-   * Initializes Language system
+   * Initializes Language system. Default is Spanish (sales-first).
    */
   setupLanguageManager() {
     const savedLang = localStorage.getItem('lang');
-    const currentLang = translations[savedLang] ? savedLang : 'en';
+    const currentLang = translations[savedLang] ? savedLang : 'es';
     this.applyLanguage(currentLang);
 
     this.langButtons.forEach(btn => {
@@ -289,7 +233,7 @@ class Portfolio {
   }
 
   applyLanguage(lang) {
-    if (!translations[lang]) lang = 'en';
+    if (!translations[lang]) lang = 'es';
     document.documentElement.setAttribute('lang', lang);
     localStorage.setItem('lang', lang);
 
@@ -305,6 +249,12 @@ class Portfolio {
       if (translations[lang] && translations[lang][key]) {
         el.innerHTML = translations[lang][key];
       }
+    });
+
+    // Show sales-only content (Servicios, FAQ, sales hero bits) only in Spanish.
+    // Inline display:none beats class rules like .btn { display:inline-flex }.
+    this.langScopedEls.forEach(el => {
+      el.style.display = (el.getAttribute('data-lang-only') === lang) ? '' : 'none';
     });
   }
 
