@@ -23,9 +23,35 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+
+    <!-- Tema temprano (evita parpadeo) + decide la animación de entrada:
+         solo la primera visita de la sesión y si el usuario no pide reducir movimiento. -->
+    <script>
+        (function () {
+            var d = document.documentElement;
+            try {
+                var t = localStorage.getItem('theme');
+                var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                d.setAttribute('data-theme', (t === 'dark' || (!t && prefersDark)) ? 'dark' : 'light');
+            } catch (e) {}
+            try {
+                var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                if (!reduce && !sessionStorage.getItem('introSeen')) {
+                    d.classList.add('intro-play');
+                    sessionStorage.setItem('introSeen', '1');
+                }
+            } catch (e) {}
+        })();
+    </script>
 </head>
 
 <body>
+    <!-- Splash de entrada (solo con html.intro-play; se auto-oculta por CSS) -->
+    <div class="intro-splash" aria-hidden="true">
+        <div class="intro-logo">
+            <span class="intro-l">M</span><span class="intro-l">G</span><span class="intro-l">H</span><span class="intro-dot">.</span>
+        </div>
+    </div>
     <header class="navbar">
         <div class="container navbar-container">
             <div class="logo">MGH<span class="dot">.</span></div>
@@ -151,6 +177,13 @@
                         <h3 class="freelance-card-title">Lectura de documentos con IA</h3>
                         <p class="freelance-card-desc">
                             Facturas, albaranes o informes en PDF convertidos en datos estructurados y validados, listos para tu hoja de cálculo. Se acabó teclear a mano.
+                        </p>
+                    </article>
+                    <article class="freelance-card">
+                        <i class="fas fa-laptop-code freelance-card-icon" aria-hidden="true"></i>
+                        <h3 class="freelance-card-title">Software y aplicaciones a medida</h3>
+                        <p class="freelance-card-desc">
+                            ¿Necesitas algo que ninguna herramienta de estantería te da? Desarrollo el backend, la API o la aplicación completa a tu medida. Soy desarrollador titulado (DAW) con experiencia en fintech: no ensamblo cuatro herramientas ajenas — programo la solución de cero y la dejo lista para producción.
                         </p>
                     </article>
                 </div>
