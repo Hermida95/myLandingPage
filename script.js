@@ -345,3 +345,80 @@ class Portfolio {
 document.addEventListener('DOMContentLoaded', () => {
   new Portfolio();
 });
+
+/**
+ * Demo de agente de WhatsApp: reproduce una conversación simulada
+ * cuando la sección entra en pantalla. Con prefers-reduced-motion
+ * muestra la conversación completa sin animar.
+ */
+function initWaDemo() {
+  const chat = document.getElementById('waChat');
+  const replayBtn = document.getElementById('waReplay');
+  if (!chat) return;
+
+  const script = [
+    { who: 'out', time: '23:41', text: 'Hola, ¿tenéis hueco esta semana para fisio de espalda?' },
+    { who: 'in', time: '23:41', text: '¡Hola! Soy el asistente de Clínica Aurora 😊 Sí, hay hueco. ¿Te viene mejor jueves o viernes?' },
+    { who: 'out', time: '23:42', text: 'El jueves por la tarde' },
+    { who: 'in', time: '23:42', text: 'El jueves tengo libre a las 17:00 y a las 18:30. ¿Cuál prefieres?' },
+    { who: 'out', time: '23:42', text: 'A las 17:00' },
+    { who: 'in', time: '23:42', text: 'Listo ✅ Cita reservada: jueves a las 17:00 con fisioterapia. Te escribo el día antes para recordártelo.' },
+    { who: 'sys', text: '📅 Añadida a la agenda · Recordatorio programado' }
+  ];
+
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let runId = 0;
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+
+  const addMsg = (m) => {
+    const el = document.createElement('div');
+    el.className = 'wa-msg ' + m.who;
+    el.textContent = m.text;
+    if (m.time) {
+      const t = document.createElement('time');
+      t.textContent = m.time;
+      el.appendChild(t);
+    }
+    chat.appendChild(el);
+  };
+
+  async function play() {
+    const id = ++runId;
+    chat.innerHTML = '';
+    if (reduced) {
+      script.forEach(addMsg);
+      return;
+    }
+    await wait(600);
+    for (const m of script) {
+      if (id !== runId) return;
+      if (m.who === 'in') {
+        const typing = document.createElement('div');
+        typing.className = 'wa-typing';
+        typing.innerHTML = '<span></span><span></span><span></span>';
+        chat.appendChild(typing);
+        await wait(1300);
+        typing.remove();
+      } else if (m.who === 'out') {
+        await wait(1100);
+      } else {
+        await wait(500);
+      }
+      if (id !== runId) return;
+      addMsg(m);
+    }
+  }
+
+  if (replayBtn) replayBtn.addEventListener('click', play);
+
+  let started = false;
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && !started) {
+      started = true;
+      play();
+    }
+  }, { threshold: 0.4 });
+  observer.observe(chat);
+}
+
+document.addEventListener('DOMContentLoaded', initWaDemo);

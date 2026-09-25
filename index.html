@@ -56,6 +56,7 @@
         <div class="container navbar-container">
             <div class="logo">MGH<span class="dot">.</span></div>
             <nav class="nav-links">
+                <a href="#demo" data-lang-only="es">Demo</a>
                 <a href="#servicios" data-lang-only="es">Servicios</a>
                 <a href="#projects" data-i18n="nav.work">Work</a>
                 <a href="#about" data-i18n="nav.about">About</a>
@@ -122,6 +123,49 @@
         </section>
 
 <!-- =========================================================
+     DEMO WHATSAPP — móvil con conversación simulada (solo ES).
+     Para quitarla: borra este bloque, el CSS "wa-demo*" en style.css
+     y la función initWaDemo() en script.js.
+     ========================================================= -->
+        <section id="demo" class="wa-demo" data-lang-only="es">
+            <div class="container wa-demo-grid">
+                <div class="wa-demo-copy">
+                    <span class="wa-demo-eyebrow">Así trabaja un agente de WhatsApp</span>
+                    <h2 class="wa-demo-title">Son las 23:41 y tu clínica ya tiene una cita más.</h2>
+                    <p class="wa-demo-text">
+                        El agente responde al instante, entiende lo que pide el cliente, consulta tu agenda y reserva la cita. Si algo se sale de lo normal, te avisa a ti. Tú te enteras por la mañana.
+                    </p>
+                    <ul class="wa-demo-points">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Responde en segundos, a cualquier hora</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Reserva en tu calendario sin intervención</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Recordatorios automáticos para reducir ausencias</li>
+                    </ul>
+                    <a class="btn btn-primary btn-whatsapp"
+                        href="https://wa.me/34626356949?text=Hola%20Miguel%2C%20he%20visto%20la%20demo%20del%20agente%20de%20WhatsApp%20y%20quiero%20uno%20para%20mi%20negocio."
+                        target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Quiero uno para mi negocio</a>
+                </div>
+
+                <div class="wa-demo-stage">
+                    <div class="wa-phone" role="img" aria-label="Demostración de una conversación de WhatsApp en la que un agente de IA reserva una cita de fisioterapia">
+                        <div class="wa-phone-notch"></div>
+                        <div class="wa-header">
+                            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                            <div class="wa-avatar"><i class="fas fa-heart-pulse" aria-hidden="true"></i></div>
+                            <div class="wa-header-info">
+                                <strong>Clínica Aurora</strong>
+                                <span>asistente virtual · en línea</span>
+                            </div>
+                        </div>
+                        <div class="wa-chat" id="waChat" aria-hidden="true"></div>
+                    </div>
+                    <button class="wa-replay" id="waReplay" type="button"><i class="fas fa-rotate-right" aria-hidden="true"></i> Ver de nuevo</button>
+                    <p class="wa-demo-note">Conversación de ejemplo con datos ficticios.</p>
+                </div>
+            </div>
+        </section>
+<!-- ================= FIN DEMO WHATSAPP ================= -->
+
+        <!-- =========================================================
      SERVICIOS — sección de ventas (solo ES, oculta en EN/FR).
      Para quitarla: borra este bloque, el CSS ".freelance*" en
      style.css y, si procede, el enlace del nav a #servicios.
