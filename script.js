@@ -120,7 +120,7 @@ const translations = {
     "nav.work": "Proyectos",
     "nav.experience": "Experiencia",
     "nav.contact": "Contacto",
-    "hero.subtitle": "Automatizo la atención al cliente y la captación de leads con IA.",
+    "hero.subtitle": "Desarrollador de software · Automatización e IA aplicada a negocios.",
     "hero.desc": "Agentes de IA que contestan WhatsApp a cualquier hora, agenda de citas, captación de leads y automatizaciones a medida para <strong>clínicas, inmobiliarias, fisioterapeutas y autónomos</strong>. Menos tareas repetitivas, cero clientes perdidos por no contestar a tiempo — y te lo dejo funcionando, no un piloto que se queda en el cajón.",
     "hero.whatsapp": "Escríbeme por WhatsApp",
     "hero.cv": "Descargar CV",
