@@ -1589,3 +1589,112 @@ html.intro-play .hero-hiring-note { animation-delay: 1.86s; }
   max-width: 62ch;
   margin-bottom: 1rem;
 }
+
+/* =========================================
+   Servicios desplegables (<details> nativo, sin JS)
+   ========================================= */
+.freelance-grid {
+  align-items: start;
+}
+
+.service {
+  background-color: #171717;
+  border: 1px solid #262626;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.service:hover,
+.service[open] {
+  border-color: #60a5fa;
+}
+
+.service summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.4rem 1.5rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.service summary::-webkit-details-marker {
+  display: none;
+}
+
+.service summary::after {
+  content: '+';
+  margin-left: auto;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 400;
+  color: #60a5fa;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.service[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.service summary:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+.service-icon {
+  font-size: 1.5rem;
+  color: #60a5fa;
+  margin-top: 0.15rem;
+  width: 1.75rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.service-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.service-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f3f4f6;
+}
+
+.service-line {
+  color: #a1a1aa;
+  font-size: 0.95rem;
+}
+
+.service-body {
+  margin: 0;
+  padding: 0 1.5rem 1.5rem 4.25rem;
+  color: #a1a1aa;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Animación suave donde el navegador soporta ::details-content; si no, abre sin animar. */
+@supports selector(::details-content) {
+  .service {
+    interpolate-size: allow-keywords;
+  }
+  .service::details-content {
+    block-size: 0;
+    overflow: hidden;
+    transition: block-size 0.3s ease, content-visibility 0.3s allow-discrete;
+  }
+  .service[open]::details-content {
+    block-size: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service::details-content,
+  .service summary::after {
+    transition: none;
+  }
+}
