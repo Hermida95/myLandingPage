@@ -62,7 +62,7 @@ const translations = {
     "contact.desc": "I'm open to backend roles and to freelance AI-integration projects. Tell me what you're working on and we'll see if I can help.",
     "contact.whatsapp": "Message me on WhatsApp",
     "contact.btn": "Email me",
-    "footer.copy": "&copy; <span id=\"year\"></span> &mdash; Engineered with precision and IaC."
+    "footer.copy": "&copy; <span id=\"year\">2026</span> Miguel García Hermida"
   },
   fr: {
     "nav.about": "À Propos",
@@ -113,7 +113,7 @@ const translations = {
     "contact.desc": "Je suis ouvert aux postes backend et aux projets freelance d'intégration d'IA. Dites-moi sur quoi vous travaillez et nous verrons si je peux aider.",
     "contact.whatsapp": "Écrivez-moi sur WhatsApp",
     "contact.btn": "M'écrire un email",
-    "footer.copy": "&copy; <span id=\"year\"></span> &mdash; Conçu avec précision et IaC."
+    "footer.copy": "&copy; <span id=\"year\">2026</span> Miguel García Hermida"
   },
   es: {
     "nav.about": "Perfil",
@@ -164,7 +164,7 @@ const translations = {
     "contact.desc": "Cuéntame qué proceso te está costando tiempo o qué te gustaría automatizar. En una llamada corta vemos si tiene sentido — sin compromiso. ¿Prefieres contratarme como desarrollador? También estoy abierto a ello.",
     "contact.whatsapp": "Escríbeme por WhatsApp",
     "contact.btn": "Enviar un email",
-    "footer.copy": "&copy; <span id=\"year\"></span> &mdash; Diseñado con precisión e IaC."
+    "footer.copy": "&copy; <span id=\"year\">2026</span> Miguel García Hermida"
   }
 };
 
@@ -273,12 +273,13 @@ class Portfolio {
    */
   setupHoverImages() {
     const container = document.getElementById('hover-image-container');
-    const hoverImage = document.getElementById('hover-image');
     const hoverItems = document.querySelectorAll('.cursor-hover-item');
     const projectsSection = document.getElementById('projects');
 
-    if (!container || !hoverImage || hoverItems.length === 0 || !projectsSection) return;
+    if (!container || hoverItems.length === 0 || !projectsSection) return;
 
+    // La imagen se crea al primer hover: no hay <img> vacío en el HTML.
+    let hoverImage = null;
     let isHovering = false;
 
     const moveImage = (e) => {
@@ -294,6 +295,11 @@ class Portfolio {
       item.addEventListener('mouseenter', (e) => {
         const imageUrl = item.getAttribute('data-image');
         if (imageUrl) {
+          if (!hoverImage) {
+            hoverImage = document.createElement('img');
+            hoverImage.alt = '';
+            container.appendChild(hoverImage);
+          }
           hoverImage.src = imageUrl;
           isHovering = true;
           container.classList.add('show');
