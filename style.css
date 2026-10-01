@@ -1268,7 +1268,7 @@ html.intro-play .hero-title       { animation-delay: 1.35s; }
 html.intro-play .hero-subtitle    { animation-delay: 1.50s; }
 html.intro-play .hero-description { animation-delay: 1.62s; }
 html.intro-play .cta-group        { animation-delay: 1.74s; }
-html.intro-play @keyframes introRise {
+@keyframes introRise {
   from { opacity: 0; transform: translateY(1.2rem); }
   to   { opacity: 1; transform: translateY(0); }
 }
