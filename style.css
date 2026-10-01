@@ -1136,22 +1136,6 @@ section:last-of-type {
   color: #fff;
 }
 
-/* Small "hire me" note under the sales hero */
-.hero-hiring-note {
-  margin-top: 1.75rem;
-  font-size: 0.95rem;
-  color: var(--text-muted);
-}
-
-.hero-hiring-note a {
-  color: var(--accent);
-  font-weight: 600;
-}
-
-.hero-hiring-note a:hover {
-  text-decoration: underline;
-}
-
 /* Contact section: two buttons side by side */
 .contact-actions {
   display: flex;
@@ -1284,9 +1268,7 @@ html.intro-play .hero-title       { animation-delay: 1.35s; }
 html.intro-play .hero-subtitle    { animation-delay: 1.50s; }
 html.intro-play .hero-description { animation-delay: 1.62s; }
 html.intro-play .cta-group        { animation-delay: 1.74s; }
-html.intro-play .hero-hiring-note { animation-delay: 1.86s; }
-
-@keyframes introRise {
+html.intro-play @keyframes introRise {
   from { opacity: 0; transform: translateY(1.2rem); }
   to   { opacity: 1; transform: translateY(0); }
 }

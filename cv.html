@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV · Miguel García Hermida</title>
+    <meta name="description"
+        content="Currículum de Miguel García Hermida: trayectoria, perfil técnico (Python, FastAPI, LLMs) y descarga del CV en español, inglés y francés.">
+    <link rel="canonical" href="https://mhermida.vercel.app/cv">
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Miguel García Hermida">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:url" content="https://mhermida.vercel.app/cv">
+    <meta property="og:title" content="CV · Miguel García Hermida">
+    <meta property="og:description"
+        content="Trayectoria, perfil técnico y descarga del CV de Miguel García Hermida, desarrollador backend (Python, FastAPI, LLMs).">
+    <meta property="og:image" content="https://mhermida.vercel.app/img/Img-previsualizacion.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CV · Miguel García Hermida">
+    <meta name="twitter:description"
+        content="Trayectoria, perfil técnico y descarga del CV de Miguel García Hermida, desarrollador backend (Python, FastAPI, LLMs).">
+    <meta name="twitter:image" content="https://mhermida.vercel.app/img/Img-previsualizacion.png">
+
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('theme');
+                var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                document.documentElement.setAttribute('data-theme', (t === 'dark' || (!t && prefersDark)) ? 'dark' : 'light');
+            } catch (e) {}
+        })();
+    </script>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a class="logo" href="/" aria-label="Home">MGH<span class="dot">.</span></a>
+            
+            <div class="nav-actions">
+                <div class="lang-toggle-wrapper" role="group" aria-label="Select language">
+                    <button class="lang-option" data-lang="en">EN</button>
+                    <span class="lang-sep" aria-hidden="true">/</span>
+                    <button class="lang-option" data-lang="fr">FR</button>
+                    <span class="lang-sep" aria-hidden="true">/</span>
+                    <button class="lang-option" data-lang="es">ES</button>
+                </div>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="/#contact" class="btn btn-primary" data-i18n="nav.contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero slide-up">
+            <div class="container">
+                <h1 class="hero-title">CV<span class="dot">.</span></h1>
+                <h2 class="hero-subtitle" data-i18n="cv.subtitle">Miguel Garcia Hermida · Backend Developer</h2>
+                <p class="hero-description" data-i18n="cv.desc">Career, technical profile and downloadable CV.</p>
+                <div class="cta-group">
+                    <a class="btn btn-secondary" href="/CV_Miguel_Garcia_Hermida_ES.pdf" download="CV_Miguel_Garcia_Hermida_ES.pdf"><i class="fas fa-file-download" aria-hidden="true"></i> 🇪🇸 Español</a>
+                    <a class="btn btn-secondary" href="/CV_Miguel_Garcia_Hermida_EN.pdf" download="CV_Miguel_Garcia_Hermida_EN.pdf"><i class="fas fa-file-download" aria-hidden="true"></i> 🇬🇧 English</a>
+                    <a class="btn btn-secondary" href="/CV_Miguel_Garcia_Hermida_FR.pdf" download="CV_Miguel_Garcia_Hermida_FR.pdf"><i class="fas fa-file-download" aria-hidden="true"></i> 🇫🇷 Français</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2 class="section-title" data-i18n="experience.title">Career Trajectory<span class="dot">.</span>
+                </h2>
+                <div class="timeline">
+
+                    <div class="timeline-item timeline-item--future fade-in">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-badge" data-i18n="experience.e0.badge">The Road Ahead</span>
+                            <h3 class="timeline-role" data-i18n="experience.e0.role">Cloud & DevOps Engineer</h3>
+                            <span class="timeline-date" data-i18n="experience.e0.date">Where I'm heading next</span>
+                            <p class="timeline-details" data-i18n="experience.e0.desc">
+                                Building on solid backend foundations, my goal is to grow into Cloud & DevOps engineering: deepening Infrastructure as Code (Terraform), container orchestration with Kubernetes, and CI/CD pipelines on AWS and GCP. I want to own the full path from code to resilient, automated production infrastructure.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-role" data-i18n="experience.free.role">Freelance Developer — AI Automation</h3>
+                            <span class="timeline-date" data-i18n="experience.free.date">2026 — Present</span>
+                            <p class="timeline-details" data-i18n="experience.free.desc">
+                                I help clinics, real-estate agencies and self-employed professionals automate customer service and lead capture: WhatsApp AI agents, appointment scheduling, custom automations and bespoke development — taken to production, not left as a demo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-role" data-i18n="experience.e1.role">Backend Developer — Coinscrap Finance (fintech)</h3>
+                            <span class="timeline-date" data-i18n="experience.e1.date">Apr 2026 &mdash; Jul 2026 · Internship</span>
+                            <p class="timeline-details" data-i18n="experience.e1.desc">
+                                Integrated LLMs into production with Python, inside a real fintech product. REST APIs, PostgreSQL/SQLAlchemy, automated testing (pytest) and containerized environments with Docker.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-role" data-i18n="experience.e2.role">Higher Degree in Web Application
+                                Development (DAW)</h3>
+                            <span class="timeline-date" data-i18n="experience.e2.date">2024 &mdash; 2026</span>
+                            <p class="timeline-details" data-i18n="experience.e2.desc">
+                                Formalized deep technical skills traversing the entire software stack. Engineered complex backend solutions, REST APIs, and gained extensive practice in database administration, server deployments, and modern architectural patterns.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-role" data-i18n="experience.e3.role">Team & Operations Management (Retail)
+                            </h3>
+                            <span class="timeline-date" data-i18n="experience.e3.date">6 years · until 2024</span>
+                            <p class="timeline-details" data-i18n="experience.e3.desc">
+                                Six years leading teams and end-to-end operations in retail. Direct client contact, high-stakes negotiation and, above all, getting people to actually adopt new tools and processes — the part that decides whether technology delivers or gathers dust.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="profile" class="about">
+            <div class="container">
+                <h2 class="section-title" data-i18n="cv.profile.title">Technical profile<span class="dot">.</span></h2>
+                <div class="about-text fade-in">
+                        <p data-i18n="about.p2">
+                            My technical core is <strong>Python (FastAPI/Django)</strong>, with <strong>Node.js</strong> and <strong>TypeScript</strong> on the JavaScript side. REST APIs, <strong>PostgreSQL / SQLAlchemy</strong>, and <strong>Docker</strong>. I integrate <strong>LLMs into production flows</strong> — not demos — with authentication, automated testing (pytest) and solid engineering practices. I'm currently expanding this profile toward Cloud/DevOps with the <strong>AWS SAA</strong> certification, <strong>Terraform</strong> and <strong>Kubernetes</strong>.
+                        </p>
+
+                        <div class="stack-showcase fade-in">
+
+                            <div class="stack-category">
+                                <h4 class="stack-category-title" data-i18n="about.stack.languages">Languages</h4>
+                                <div class="stack-grid">
+                                    <div class="stack-item" style="--brand-color: #3776AB;">
+                                        <i class="fab fa-python" style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--brand-color);"></i>
+                                        <span>Python</span>
+                                    </div>
+                                    <div class="stack-item" style="--brand-color: #3178C6;">
+                                        <i class="fas fa-code" style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--brand-color);"></i>
+                                        <span>TypeScript</span>
+                                    </div>
+                                    <div class="stack-item" style="--brand-color: #F7DF1E;">
+                                        <i class="fab fa-js" style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--brand-color);"></i>
+                                        <span>JavaScript</span>
+                                    </div>
+                                    <div class="stack-item" style="--brand-color: #339933;">
+                                        <i class="fab fa-node-js" style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--brand-color);"></i>
+                                        <span>Node.js</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stack-category">
+                                <h4 class="stack-category-title" data-i18n="about.stack.core">Backend & Data</h4>
+                                <div class="stack-grid">
+                                    <div class="stack-item" style="--brand-color: #009688;">
+                                        <i class="fas fa-bolt" style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--brand-color);"></i>
+                                        <span>FastAPI / Django</span>
+                                    </div>
+                                    <div class="stack-item" style="--brand-color: #336791;">
+                                        <i class="fas fa-database" style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--brand-color);"></i>
+                                        <span>PostgreSQL</span>
+                                    </div>
+                                    <div class="stack-item" style="--brand-color: #2496ED;">
+                                        <i class="fab fa-docker" style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--brand-color);"></i>
+                                        <span>Docker</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stack-category">
+                                <h4 class="stack-category-title" data-i18n="about.stack.ai">AI in Production & CI/CD</h4>
+                                <div class="stack-grid">
+                                    <div class="stack-item" style="--brand-color: #A0A0A0;">
+                                        <i class="fas fa-brain" style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--brand-color);"></i>
+                                        <span>LLMs (Claude/OpenAI)</span>
+                                    </div>
+                                    <div class="stack-item" style="--brand-color: #2088FF;">
+                                        <i class="fab fa-github" style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--brand-color);"></i>
+                                        <span>GitHub Actions</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="stack-category">
+                                <h4 class="stack-category-title" data-i18n="about.stack.learning">Expanding · In Progress</h4>
+                                <div class="stack-grid">
+                                    <div class="stack-item" style="--brand-color: #FF9900;">
+                                        <i class="fab fa-aws" style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--brand-color);"></i>
+                                        <span>AWS (SAA)</span>
+                                    </div>
+                                    <div class="stack-item" style="--brand-color: #844FBA;">
+                                        <i class="fas fa-cubes" style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--brand-color);"></i>
+                                        <span>Terraform</span>
+                                    </div>
+                                    <div class="stack-item" style="--brand-color: #326CE5;">
+                                        <i class="fas fa-dharmachakra" style="font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--brand-color);"></i>
+                                        <span>Kubernetes</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="brand">MGH<span class="dot">.</span></div>
+            <div class="copy" data-i18n="footer.copy">
+                &copy; <span id="year">2026</span> Miguel García Hermida
+            </div>
+            <div class="footer-links">
+                <a href="/" class="footer-cv">Home</a>
+                <a href="https://github.com/Hermida95" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/miguel-garcía-hermida-796b67180/" target="_blank"
+                    aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
