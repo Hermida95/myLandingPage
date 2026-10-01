@@ -1569,3 +1569,23 @@ html.intro-play .hero-hiring-note { animation-delay: 1.86s; }
 @media (prefers-reduced-motion: reduce) {
   .wa-msg, .wa-typing, .wa-typing span { animation: none; }
 }
+
+/* Project groups (Ecosistema propio / Otros proyectos) */
+.project-group-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  margin: 3rem 0 0.5rem;
+}
+
+.projects-list-pure > .project-group-title:first-child {
+  margin-top: 0;
+}
+
+.project-group-intro {
+  color: var(--text-muted);
+  max-width: 62ch;
+  margin-bottom: 1rem;
+}
