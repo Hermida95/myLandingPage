@@ -131,7 +131,7 @@ const translations = {
     "nav.cv": "CV",
     "nav.contact": "Contacto",
     "hero.subtitle": "Desarrollador de software · Automatización e IA aplicada a negocios.",
-    "hero.desc": "Agentes de IA que contestan WhatsApp a cualquier hora, agenda de citas, captación de leads y automatizaciones a medida para <strong>clínicas, inmobiliarias, fisioterapeutas y autónomos</strong>. Menos tareas repetitivas, cero clientes perdidos por no contestar a tiempo — y te lo dejo funcionando, no un piloto que se queda en el cajón.",
+    "hero.desc": "Un asistente que contesta tu WhatsApp a cualquier hora, agenda las citas y recoge los datos de tus clientes nuevos. Para <strong>clínicas, inmobiliarias y autónomos</strong>. Te lo dejo funcionando y documentado.",
     "hero.whatsapp": "Escríbeme por WhatsApp",
     "about.title": "Sobre mí<span class=\"dot\">.</span>",
     "cv.subtitle": "Miguel Garcia Hermida · Desarrollador Backend",

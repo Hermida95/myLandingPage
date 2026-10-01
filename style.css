@@ -1680,3 +1680,90 @@ html.intro-play @keyframes introRise {
     transition: none;
   }
 }
+
+/* =========================================
+   Fondo del hero: luces fluidas difuminadas (CSS puro)
+   ========================================= */
+.hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+}
+
+.hero-bg span {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.28;
+  will-change: transform;
+  animation: heroDrift 22s ease-in-out infinite alternate;
+}
+
+.hero-bg span:nth-child(1) {
+  width: 75vw;
+  height: 22vw;
+  top: 8%;
+  right: -20%;
+  background: var(--accent);
+  transform: rotate(-18deg);
+}
+
+.hero-bg span:nth-child(2) {
+  width: 60vw;
+  height: 18vw;
+  bottom: 4%;
+  left: -18%;
+  background: #22d3ee;
+  opacity: 0.2;
+  transform: rotate(12deg);
+  animation-duration: 28s;
+  animation-direction: alternate-reverse;
+}
+
+.hero-bg span:nth-child(3) {
+  width: 40vw;
+  height: 14vw;
+  top: 38%;
+  left: 30%;
+  background: #6366f1;
+  opacity: 0.18;
+  transform: rotate(-6deg);
+  animation-duration: 34s;
+}
+
+[data-theme="dark"] .hero-bg span {
+  opacity: 0.5;
+}
+
+[data-theme="dark"] .hero-bg span:nth-child(2) {
+  opacity: 0.32;
+}
+
+[data-theme="dark"] .hero-bg span:nth-child(3) {
+  opacity: 0.3;
+}
+
+@keyframes heroDrift {
+  from { translate: -4vw -2vw; scale: 1; }
+  to   { translate: 5vw 3vw; scale: 1.18; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg span {
+    animation: none;
+  }
+}
