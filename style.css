@@ -1080,17 +1080,6 @@ section:last-of-type {
   color: #f3f4f6;
 }
 
-.freelance-authority {
-  border-left: 3px solid #60a5fa;
-  padding-left: 1.5rem;
-  margin: 0 0 3rem;
-  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
-  font-weight: 500;
-  line-height: 1.5;
-  color: #f3f4f6;
-  max-width: 48ch;
-}
-
 .freelance-cta {
   text-align: center;
 }
@@ -1765,5 +1754,161 @@ html.intro-play .cta-group        { animation-delay: 1.74s; }
 @media (prefers-reduced-motion: reduce) {
   .hero-bg span {
     animation: none;
+  }
+}
+
+/* =========================================
+   Proyectos desplegables (<details> nativo, sin JS)
+   Resumen: título + frase simple + iconos de tecnologías. Detalle al abrir.
+   ========================================= */
+details.project-row {
+  display: block;
+  padding: 0;
+}
+
+details.project-row:hover {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+details.project-row summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+details.project-row summary::-webkit-details-marker {
+  display: none;
+}
+
+details.project-row summary::after {
+  content: '+';
+  font-size: 1.75rem;
+  line-height: 1;
+  font-weight: 400;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+details.project-row[open] summary::after {
+  transform: rotate(45deg);
+}
+
+details.project-row summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+details.project-row .project-row-info {
+  display: block;
+  flex: 1;
+  max-width: 600px;
+}
+
+details.project-row .project-title {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.project-line {
+  display: block;
+  color: var(--text-muted);
+}
+
+details.project-row .project-tech {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 0;
+  min-width: 0;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+details.project-row .project-tech i {
+  display: inline-block;
+}
+
+details.project-row .project-tech i[class*="fa-"] {
+  font-size: 1.35rem;
+  color: var(--text-muted);
+}
+
+.project-body {
+  padding: 0 0 2rem;
+  max-width: 640px;
+}
+
+.project-stack {
+  margin: 0.9rem 0 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.project-body .project-links {
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  details.project-row {
+    gap: 0;
+  }
+
+  details.project-row summary {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 1.5rem 0;
+  }
+
+  details.project-row .project-row-info {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: none;
+    order: 1;
+  }
+
+  details.project-row summary::after {
+    order: 2;
+  }
+
+  details.project-row .project-tech {
+    order: 3;
+    flex-basis: 100%;
+    justify-content: flex-start;
+    font-size: 1.4rem;
+  }
+
+  .project-body .project-links {
+    margin-top: 1.25rem;
+  }
+}
+
+@supports selector(::details-content) {
+  details.project-row {
+    interpolate-size: allow-keywords;
+  }
+  details.project-row::details-content {
+    block-size: 0;
+    overflow: hidden;
+    transition: block-size 0.3s ease, content-visibility 0.3s allow-discrete;
+  }
+  details.project-row[open]::details-content {
+    block-size: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  details.project-row::details-content,
+  details.project-row summary::after {
+    transition: none;
   }
 }
