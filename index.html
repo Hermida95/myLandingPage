@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miguel García Hermida | Automatización con IA para negocios · Desarrollo a medida</title>
     <meta name="description"
-        content="Agentes de IA en WhatsApp, captación de contactos, agenda de citas y automatizaciones a medida para clínicas, inmobiliarias y autónomos. Ingeniero de software (fintech).">
+        content="Agentes de IA en WhatsApp, captación de contactos, agenda de citas y automatizaciones a medida para clínicas, inmobiliarias y autónomos. Desarrollador de software.">
     <link rel="canonical" href="https://mhermida.vercel.app/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Miguel García Hermida">
@@ -88,33 +88,30 @@
     </header>
 
     <main>
-        <section class="hero slide-up">
-            <div class="hero-bg" aria-hidden="true"><span></span><span></span><span></span></div>
+        <section class="hero slide-up" id="hero">
+            <div class="hero-sky" aria-hidden="true"><canvas class="hero-dots" id="heroDots"></canvas></div>
             <div class="container">
-                <h1 class="hero-title">Miguel Garcia Hermida<span class="dot">.</span><svg class="hero-cloud" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                        <path class="hc-outline" d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round" />
-                        <g class="hc-net" stroke="var(--accent)" stroke-width="0.7">
-                            <line x1="7.6" y1="14" x2="12" y2="10.8" />
-                            <line x1="12" y1="10.8" x2="16.4" y2="13.4" />
-                            <line x1="7.6" y1="14" x2="16.4" y2="13.4" />
-                        </g>
-                        <g class="hc-nodes" fill="var(--accent)">
-                            <circle cx="7.6" cy="14" r="1.15" />
-                            <circle cx="12" cy="10.8" r="1.15" />
-                            <circle cx="16.4" cy="13.4" r="1.15" />
-                        </g>
-                    </svg></h1>
-                <h2 class="hero-subtitle" data-i18n="hero.subtitle">Desarrollador de software · Automatización e IA aplicada a negocios.</h2>
-                <p class="hero-description" data-i18n="hero.desc">
-                    Un asistente que contesta tu WhatsApp a cualquier hora, agenda las citas y recoge los datos de tus clientes nuevos. Para <strong>clínicas, inmobiliarias y autónomos</strong>. Te lo dejo funcionando y documentado.
-                </p>
-                <div class="cta-group">
-                    <a class="btn btn-primary btn-whatsapp" href="https://wa.me/34626356949?text=Hola%20Miguel%2C%20me%20interesa%20automatizar%20la%20atenci%C3%B3n%20al%20cliente%20y%20la%20captaci%C3%B3n%20de%20clientes%20en%20mi%20negocio." target="_blank" rel="noopener noreferrer" data-i18n="hero.whatsapp"><i class="fab fa-whatsapp"></i> Escríbeme por WhatsApp</a>
-                    <a href="#servicios" class="btn btn-secondary" data-lang-only="es"><i class="fas fa-arrow-down"></i> Ver servicios</a>
-                    <a href="https://github.com/Hermida95" target="_blank" rel="noopener noreferrer"
-                        class="btn btn-secondary">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
+                <div class="hero-grid">
+                    <div class="hero-id">
+                        <h1 class="hero-name">Miguel Garcia Hermida<span class="dot">.</span></h1>
+                        <div class="cta-group">
+                            <a class="btn btn-primary btn-whatsapp" data-lang-only="es" href="https://wa.me/34626356949?text=Hola%20Miguel%2C%20me%20interesa%20automatizar%20la%20atenci%C3%B3n%20al%20cliente%20y%20la%20captaci%C3%B3n%20de%20clientes%20en%20mi%20negocio." target="_blank" rel="noopener noreferrer" data-i18n="hero.whatsapp"><i class="fab fa-whatsapp"></i> Escríbeme por WhatsApp</a>
+                            <a href="#servicios" class="btn btn-secondary" data-lang-only="es"><i class="fas fa-arrow-down"></i> Ver servicios</a>
+                            <a href="/cv" class="btn btn-primary" data-lang-not="es" data-i18n="hero.cv" style="display:none">View CV</a>
+                            <a href="https://github.com/Hermida95" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h2 class="hero-role" data-i18n="hero.role">Desarrollador de software</h2>
+                    <p class="hero-description" data-i18n="hero.desc">
+                            Soy Miguel, desarrollador de software. Antes de programar trabajé seis años en retail, lideré equipos y tuve mi propio negocio, y por eso construyo pensando en el negocio y en quien lo va a usar. Hoy trabajo con <strong>Python e IA en producción</strong> y sigo creciendo hacia Cloud y DevOps (AWS SAA, Terraform).</p>
+                    <ul class="hero-chips">
+                        <li data-i18n="hero.chip1">Python / FastAPI</li>
+                        <li data-i18n="hero.chip2">IA aplicada</li>
+                        <li data-i18n="hero.chip3">Enfoque de negocio</li>
+                    </ul>
+                    <figure class="hero-photo">
+                        <img src="img/hero/foto-5.jpg" alt="Miguel Garcia Hermida en una cima de montaña con su perro" width="1050" height="1400" fetchpriority="high">
+                    </figure>
                 </div>
             </div>
         </section>
@@ -246,7 +243,7 @@
                                 <span class="service-line">Backend, API o aplicación completa, hecha para ti.</span>
                             </span>
                         </summary>
-                        <p class="service-body">¿Necesitas algo que ninguna herramienta de estantería te da? Soy ingeniero de software con experiencia en fintech: la programo desde cero y te la dejo funcionando.</p>
+                        <p class="service-body">¿Necesitas algo que ninguna herramienta de estantería te da? Soy desarrollador de software: la programo desde cero y te la dejo funcionando.</p>
                     </details>
                     <details class="service">
                         <summary>
@@ -428,7 +425,7 @@
                     </details>
                     <details class="faq-item">
                         <summary>¿Solo haces IA?</summary>
-                        <p>No. También desarrollo backends, APIs y aplicaciones a medida. Soy ingeniero de software, así que puedo construir la solución completa, no solo el bot.</p>
+                        <p>No. También desarrollo backends, APIs y aplicaciones a medida. Soy desarrollador de software, así que puedo construir la solución completa, no solo el bot.</p>
                     </details>
                 </div>
             </div>
@@ -442,7 +439,7 @@
                 <div class="about-grid">
                     <div class="about-text fade-in">
                         <p data-i18n="about.p1">
-                            I'm a backend developer focused on <strong>Python (FastAPI/Django)</strong>. During my internship at <strong>Coinscrap Finance</strong> (fintech) I integrated <strong>LLMs in production</strong> in a real product environment. Before tech, I led teams and operations in retail for six years — that experience gives me a read on business and customers that I bring to every system I build.
+                            I'm a backend developer focused on <strong>Python (FastAPI/Django)</strong>. During my internship at <strong>Coinscrap Finance</strong> (fintech) I integrated <strong>LLMs in production</strong> in a real product environment. Before tech, I spent six years in retail, led teams and ran my own business — that experience gives me a read on business and customers that I bring to every system I build.
                         </p>
                         <p data-i18n="about.p3">
                             <strong>Communication:</strong> with a background in Modern Languages Philology, I have a professional command of <strong>English</strong> and <strong>French</strong>. I translate technical concepts — backend, AI, DevOps — into business language, which is key when the person across the table isn't technical.

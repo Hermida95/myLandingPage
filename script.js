@@ -18,14 +18,19 @@ const translations = {
     "nav.work": "Work",
     "nav.cv": "CV",
     "nav.contact": "Contact",
+    "hero.role": "Software developer",
+    "hero.cv": "View CV",
+    "hero.chip1": "Python / FastAPI",
+    "hero.chip2": "Applied AI",
+    "hero.chip3": "Business mindset",
     "hero.subtitle": "Backend Developer — Python · LLMs in production · Cloud.",
-    "hero.desc": "I design and build backends in Python (FastAPI/Django) and take LLMs to production: robust APIs and Docker deployments. I come from six years leading teams and operations in retail, so I build with the business — and whoever will use it — in mind. Currently expanding into Cloud/DevOps (AWS SAA, Terraform, Kubernetes).",
+    "hero.desc": "I design and build backends in Python (FastAPI/Django) and take LLMs to production: robust APIs and Docker deployments. I come from six years in retail, where I led teams and ran my own business, so I build with the business — and whoever will use it — in mind. Currently expanding into Cloud/DevOps (AWS SAA, Terraform, Kubernetes).",
     "hero.whatsapp": "Message me on WhatsApp",
     "about.title": "About me<span class=\"dot\">.</span>",
-    "cv.subtitle": "Miguel Garcia Hermida · Backend Developer",
+    "cv.subtitle": "Miguel Garcia Hermida · Software Developer",
     "cv.desc": "Career, technical profile and downloadable CV in Spanish, English and French.",
     "cv.profile.title": "Technical profile<span class=\"dot\">.</span>",
-    "about.p1": "I'm a backend developer focused on <strong>Python (FastAPI/Django)</strong>. During my internship at <strong>Coinscrap Finance</strong> (fintech) I integrated <strong>LLMs in production</strong> in a real product environment. Before tech, I led teams and operations in retail for six years — that experience gives me a read on business and customers that I bring to every system I build.",
+    "about.p1": "I'm a backend developer focused on <strong>Python (FastAPI/Django)</strong>. During my internship at <strong>Coinscrap Finance</strong> (fintech) I integrated <strong>LLMs in production</strong> in a real product environment. Before tech, I spent six years in retail, led teams and ran my own business — that experience gives me a read on business and customers that I bring to every system I build.",
     "about.p2": "My technical core is <strong>Python (FastAPI/Django)</strong>, with <strong>Node.js</strong> and <strong>TypeScript</strong> on the JavaScript side. REST APIs, <strong>PostgreSQL / SQLAlchemy</strong>, and <strong>Docker</strong>. I integrate <strong>LLMs into production flows</strong> — not demos — with authentication, automated testing (pytest) and solid engineering practices. I'm currently expanding this profile toward Cloud/DevOps with the <strong>AWS SAA</strong> certification, <strong>Terraform</strong> and <strong>Kubernetes</strong>.",
     "about.p3": "<strong>Communication:</strong> with a background in Modern Languages Philology, I have a professional command of <strong>English</strong> and <strong>French</strong>. I translate technical concepts — backend, AI, DevOps — into business language, which is key when the person across the table isn't technical.",
     "about.stack.languages": "Languages",
@@ -67,7 +72,7 @@ const translations = {
     "experience.e2.desc": "Formalized deep technical skills traversing the entire software stack. Engineered complex backend solutions, REST APIs, and gained extensive practice in database administration, server deployments, and modern architectural patterns.",
     "experience.e3.role": "Team & Operations Management (Retail)",
     "experience.e3.date": "6 years · until 2024",
-    "experience.e3.desc": "Six years leading teams and end-to-end operations in retail. Direct client contact, high-stakes negotiation and, above all, getting people to actually adopt new tools and processes — the part that decides whether technology delivers or gathers dust.",
+    "experience.e3.desc": "Six years in retail leading teams and end-to-end operations. Direct client contact, high-stakes negotiation and, above all, getting people to actually adopt new tools and processes — the part that decides whether technology delivers or gathers dust.",
     "contact.title": "Let's build something solid<span class=\"dot\">.</span>",
     "contact.desc": "I'm open to backend roles and to freelance AI-integration projects. Tell me what you're working on and we'll see if I can help.",
     "contact.whatsapp": "Message me on WhatsApp",
@@ -79,14 +84,19 @@ const translations = {
     "nav.work": "Projets",
     "nav.cv": "CV",
     "nav.contact": "Contact",
+    "hero.role": "Développeur logiciel",
+    "hero.cv": "Voir le CV",
+    "hero.chip1": "Python / FastAPI",
+    "hero.chip2": "IA appliquée",
+    "hero.chip3": "Sens du business",
     "hero.subtitle": "Développeur Backend — Python · LLM en production · Cloud.",
-    "hero.desc": "Je conçois et développe des backends en Python (FastAPI/Django) et je mets des LLM en production : API robustes et déploiements Docker. Je viens de six ans à diriger des équipes et des opérations dans le retail, donc je construis en pensant au business — et à qui va l'utiliser. J'élargis actuellement mon profil vers le Cloud/DevOps (AWS SAA, Terraform, Kubernetes).",
+    "hero.desc": "Je conçois et développe des backends en Python (FastAPI/Django) et je mets des LLM en production : API robustes et déploiements Docker. Je viens de six ans dans le retail, où j'ai dirigé des équipes et géré mon propre business, donc je construis en pensant au business — et à qui va l'utiliser. J'élargis actuellement mon profil vers le Cloud/DevOps (AWS SAA, Terraform, Kubernetes).",
     "hero.whatsapp": "Écrivez-moi sur WhatsApp",
     "about.title": "À propos<span class=\"dot\">.</span>",
-    "cv.subtitle": "Miguel Garcia Hermida · Développeur Backend",
+    "cv.subtitle": "Miguel Garcia Hermida · Développeur logiciel",
     "cv.desc": "Parcours, profil technique et CV à télécharger en espagnol, anglais et français.",
     "cv.profile.title": "Profil technique<span class=\"dot\">.</span>",
-    "about.p1": "Je suis développeur backend spécialisé en <strong>Python (FastAPI/Django)</strong>. Lors de mon stage chez <strong>Coinscrap Finance</strong> (fintech), j'ai intégré des <strong>LLM en production</strong> dans un environnement produit réel. Avant la tech, j'ai dirigé des équipes et des opérations dans le retail pendant six ans — une expérience qui me donne une lecture du business et du client que j'applique à chaque système que je construis.",
+    "about.p1": "Je suis développeur backend spécialisé en <strong>Python (FastAPI/Django)</strong>. Lors de mon stage chez <strong>Coinscrap Finance</strong> (fintech), j'ai intégré des <strong>LLM en production</strong> dans un environnement produit réel. Avant la tech, j'ai travaillé six ans dans le retail, dirigé des équipes et géré mon propre business — une expérience qui me donne une lecture du business et du client que j'applique à chaque système que je construis.",
     "about.p2": "Mon cœur technique, c'est <strong>Python (FastAPI/Django)</strong>, avec <strong>Node.js</strong> et <strong>TypeScript</strong> côté JavaScript. Les API REST, <strong>PostgreSQL / SQLAlchemy</strong>, et <strong>Docker</strong>. J'intègre des <strong>LLM dans des flux de production</strong> — pas des démos — avec authentification, tests automatisés (pytest) et de bonnes pratiques d'ingénierie. J'élargis actuellement ce profil vers le Cloud/DevOps avec la certification <strong>AWS SAA</strong>, <strong>Terraform</strong> et <strong>Kubernetes</strong>.",
     "about.p3": "<strong>Communication :</strong> fort de mes études en Philologie des Langues Modernes, j'ai une maîtrise professionnelle de l'<strong>anglais</strong> et du <strong>français</strong>. Je traduis les concepts techniques — backend, IA, DevOps — en langage métier, ce qui est clé quand l'interlocuteur n'est pas technique.",
     "about.stack.languages": "Langages",
@@ -128,7 +138,7 @@ const translations = {
     "experience.e2.desc": "Acquisition de compétences techniques approfondies couvrant l'ensemble de la stack logicielle. Ingénierie de solutions backend complexes, d'API REST et pratique intensive de l'administration de bases de données, des déploiements de serveurs et des modèles d'architecture modernes.",
     "experience.e3.role": "Gestion d'équipes & d'opérations (Retail)",
     "experience.e3.date": "6 ans · jusqu'en 2024",
-    "experience.e3.desc": "Six ans à diriger des équipes et des opérations de bout en bout dans le retail. Contact client direct, négociation à forts enjeux et, surtout, faire adopter réellement de nouveaux outils et processus — ce qui décide si la technologie apporte de la valeur ou prend la poussière.",
+    "experience.e3.desc": "Six ans dans le retail à diriger des équipes et des opérations de bout en bout. Contact client direct, négociation à forts enjeux et, surtout, faire adopter réellement de nouveaux outils et processus — ce qui décide si la technologie apporte de la valeur ou prend la poussière.",
     "contact.title": "Construisons quelque chose de solide<span class=\"dot\">.</span>",
     "contact.desc": "Je suis ouvert aux postes backend et aux projets freelance d'intégration d'IA. Dites-moi sur quoi vous travaillez et nous verrons si je peux aider.",
     "contact.whatsapp": "Écrivez-moi sur WhatsApp",
@@ -140,14 +150,18 @@ const translations = {
     "nav.work": "Proyectos",
     "nav.cv": "CV",
     "nav.contact": "Contacto",
+    "hero.role": "Desarrollador de software",
+    "hero.chip1": "Python / FastAPI",
+    "hero.chip2": "IA aplicada",
+    "hero.chip3": "Enfoque de negocio",
     "hero.subtitle": "Desarrollador de software · Automatización e IA aplicada a negocios.",
-    "hero.desc": "Un asistente que contesta tu WhatsApp a cualquier hora, agenda las citas y recoge los datos de tus clientes nuevos. Para <strong>clínicas, inmobiliarias y autónomos</strong>. Te lo dejo funcionando y documentado.",
+    "hero.desc": "Soy Miguel, desarrollador de software. Antes de programar trabajé seis años en retail, lideré equipos y tuve mi propio negocio, y por eso construyo pensando en el negocio y en quien lo va a usar. Hoy trabajo con <strong>Python e IA en producción</strong> y sigo creciendo hacia Cloud y DevOps (AWS SAA, Terraform).",
     "hero.whatsapp": "Escríbeme por WhatsApp",
     "about.title": "Sobre mí<span class=\"dot\">.</span>",
-    "cv.subtitle": "Miguel Garcia Hermida · Desarrollador Backend",
+    "cv.subtitle": "Miguel Garcia Hermida · Desarrollador de software",
     "cv.desc": "Trayectoria, perfil técnico y CV descargable en español, inglés y francés.",
     "cv.profile.title": "Perfil técnico<span class=\"dot\">.</span>",
-    "about.p1": "Soy ingeniero de software y, antes de la tecnología, dirigí equipos y operaciones en retail durante seis años. Esa mezcla —saber construir de verdad y saber cómo funciona un negocio por dentro— es justo lo que hace que lo que entrego se use y dé resultados, en vez de quedarse en un cajón. He integrado <strong>IA en producción en fintech (Coinscrap)</strong>, así que me manejo con datos sensibles y con lo que de verdad importa a un negocio.",
+    "about.p1": "Soy desarrollador de software y, antes de la tecnología, trabajé seis años en retail, lideré equipos y tuve mi propio negocio. Esa mezcla —saber construir de verdad y saber cómo funciona un negocio por dentro— es justo lo que hace que lo que entrego se use y dé resultados, en vez de quedarse en un cajón. He integrado <strong>IA en producción en fintech (Coinscrap)</strong>, así que me manejo con datos sensibles y con lo que de verdad importa a un negocio.",
     "about.p2": "En lo técnico, mi núcleo es <strong>Python (FastAPI/Django)</strong>, con <strong>Node.js</strong> y <strong>TypeScript</strong> en el lado JavaScript. APIs REST, <strong>PostgreSQL / SQLAlchemy</strong>, y <strong>Docker</strong>. Integro <strong>LLM en flujos de producción</strong> —no en demos— con autenticación, tests automatizados (pytest) y buenas prácticas. Estoy ampliando perfil hacia Cloud/DevOps con la certificación <strong>AWS SAA</strong>, <strong>Terraform</strong> y <strong>Kubernetes</strong>.",
     "about.p3": "<strong>Comunicación:</strong> con una formación en Filología de Lenguas Modernas, tengo un dominio profesional del <strong>inglés</strong> y el <strong>francés</strong>. Traduzco lo técnico —IA, backend, automatización— a lenguaje de negocio, algo clave cuando el interlocutor no es técnico.",
     "about.stack.languages": "Lenguajes",
@@ -189,7 +203,7 @@ const translations = {
     "experience.e2.desc": "Consolidación de competencias técnicas profundas a lo largo de todo el stack de software. Ingeniería de soluciones backend complejas, APIs REST y práctica intensiva en administración de bases de datos, despliegue de servidores y patrones de arquitectura modernos.",
     "experience.e3.role": "Gestión de equipos y operaciones (Retail)",
     "experience.e3.date": "6 años · hasta 2024",
-    "experience.e3.desc": "Seis años dirigiendo equipos y operaciones de principio a fin en retail. Trato directo con cliente, negociación de alto nivel y, sobre todo, conseguir que la gente adopte de verdad nuevas herramientas y procesos — la parte que decide si la tecnología aporta o se queda en un cajón.",
+    "experience.e3.desc": "Seis años en retail liderando equipos y operaciones de principio a fin. Trato directo con cliente, negociación de alto nivel y, sobre todo, conseguir que la gente adopte de verdad nuevas herramientas y procesos — la parte que decide si la tecnología aporta o se queda en un cajón.",
     "contact.title": "¿Hablamos?<span class=\"dot\">.</span>",
     "contact.desc": "Cuéntame qué proceso te está costando tiempo o qué te gustaría automatizar. En una llamada corta vemos si tiene sentido — sin compromiso. ¿Prefieres contratarme como desarrollador? También estoy abierto a ello.",
     "contact.whatsapp": "Escríbeme por WhatsApp",
@@ -203,6 +217,7 @@ class Portfolio {
     this.themeToggleBtn = document.getElementById('themeToggle');
     this.langButtons = document.querySelectorAll('.lang-option');
     this.langScopedEls = document.querySelectorAll('[data-lang-only]');
+    this.langNotEls = document.querySelectorAll('[data-lang-not]');
     this.yearSpan = document.getElementById('year');
 
     // Initialize standard functionalities
@@ -294,6 +309,10 @@ class Portfolio {
     // Inline display:none beats class rules like .btn { display:inline-flex }.
     this.langScopedEls.forEach(el => {
       el.style.display = (el.getAttribute('data-lang-only') === lang) ? '' : 'none';
+    });
+    // Contenido que se oculta solo en un idioma (p. ej. botón CV en EN/FR).
+    this.langNotEls.forEach(el => {
+      el.style.display = (el.getAttribute('data-lang-not') === lang) ? 'none' : '';
     });
   }
 
@@ -458,3 +477,109 @@ function initWaDemo() {
 }
 
 document.addEventListener('DOMContentLoaded', initWaDemo);
+
+
+/**
+ * Hero: rejilla de puntos irregular que reacciona al puntero.
+ * Los puntos cercanos se apartan, crecen y se unen con líneas finas
+ * (red de nodos). Sin puntero (táctil / quieto) una onda lenta recorre
+ * el campo. Con prefers-reduced-motion se pinta estático.
+ */
+function initHero() {
+  const hero = document.getElementById('hero');
+  const canvas = document.getElementById('heroDots');
+  if (!hero || !canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const GAP = 34, RADIUS = 170, LINK = GAP * 1.55;
+  let w = 0, h = 0, dpr = 1, cols = 0, rows = 0, visible = true;
+  let dotRgb = '37,99,235', hiRgb = '14,52,160';
+  let jit = new Float32Array(0);
+  const ptr = { x: -9999, y: -9999, active: false };
+  let px = new Float32Array(0), py = new Float32Array(0), pk = new Float32Array(0);
+
+  const readTheme = () => {
+    const cs = getComputedStyle(document.documentElement);
+    dotRgb = cs.getPropertyValue('--dot-rgb').trim() || dotRgb;
+    hiRgb = cs.getPropertyValue('--dot-hi-rgb').trim() || hiRgb;
+  };
+
+  const resize = () => {
+    const r = hero.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = r.width; h = r.height;
+    canvas.width = Math.round(w * dpr);
+    canvas.height = Math.round(h * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    cols = Math.ceil(w / GAP) + 2; rows = Math.ceil(h / GAP) + 2;
+    const n = cols * rows;
+    jit = new Float32Array(n * 2);
+    for (let i = 0; i < jit.length; i++) jit[i] = (Math.random() - 0.5) * GAP * 0.6;
+    px = new Float32Array(n); py = new Float32Array(n); pk = new Float32Array(n);
+  };
+
+  hero.addEventListener('pointermove', (e) => {
+    const r = hero.getBoundingClientRect();
+    ptr.x = e.clientX - r.left; ptr.y = e.clientY - r.top; ptr.active = true;
+  });
+  hero.addEventListener('pointerleave', () => { ptr.active = false; ptr.x = ptr.y = -9999; });
+
+  const draw = (time) => {
+    ctx.clearRect(0, 0, w, h);
+    const idle = !ptr.active;
+    const fx = idle ? (Math.sin(time * 0.3) * 0.5 + 0.5) * w : ptr.x;
+    const fy = idle ? h * (0.4 + Math.sin(time * 0.21) * 0.2) : ptr.y;
+    const amp = idle ? 0.75 : 1;
+    for (let i = 0; i < cols; i++) {
+      for (let j = 0; j < rows; j++) {
+        const n = i * rows + j;
+        const bx = i * GAP - GAP / 2 + jit[n * 2], by = j * GAP - GAP / 2 + jit[n * 2 + 1];
+        const dx = bx - fx, dy = by - fy, d = Math.hypot(dx, dy);
+        let k = d < RADIUS ? 1 - d / RADIUS : 0;
+        k = k * k * amp;
+        const a = Math.atan2(dy, dx);
+        px[n] = bx + Math.cos(a) * k * 18;
+        py[n] = by + Math.sin(a) * k * 18;
+        pk[n] = k;
+      }
+    }
+    // Líneas entre vecinos activos.
+    ctx.lineWidth = 0.9;
+    for (let i = 0; i < cols - 1; i++) {
+      for (let j = 0; j < rows - 1; j++) {
+        const n = i * rows + j;
+        if (pk[n] < 0.04) continue;
+        const nb = [n + rows, n + 1, n + rows + 1];
+        for (const m of nb) {
+          const q = (pk[n] + pk[m]) * 0.5;
+          if (q < 0.04) continue;
+          if (Math.hypot(px[n] - px[m], py[n] - py[m]) > LINK) continue;
+          ctx.strokeStyle = 'rgba(' + hiRgb + ',' + Math.min(0.7, q * 1.1).toFixed(3) + ')';
+          ctx.beginPath(); ctx.moveTo(px[n], py[n]); ctx.lineTo(px[m], py[m]); ctx.stroke();
+        }
+      }
+    }
+    for (let n = 0; n < px.length; n++) {
+      const k = pk[n];
+      ctx.fillStyle = k > 0.1
+        ? 'rgba(' + hiRgb + ',' + (0.4 + k * 0.6).toFixed(3) + ')'
+        : 'rgba(' + dotRgb + ',0.34)';
+      ctx.beginPath(); ctx.arc(px[n], py[n], 1.1 + k * 2.6, 0, 6.2832); ctx.fill();
+    }
+  };
+
+  const frame = (t) => {
+    if (visible) draw(t / 1000);
+    requestAnimationFrame(frame);
+  };
+
+  readTheme(); resize();
+  new MutationObserver(readTheme).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  let rt;
+  window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(resize, 200); });
+  new IntersectionObserver((en) => { visible = en[0].isIntersecting; }).observe(hero);
+  if (reduce) { ptr.active = false; draw(0); return; }
+  requestAnimationFrame(frame);
+}
+document.addEventListener('DOMContentLoaded', initHero);
